@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox Layout Example 1</title>
-</head>
-<body>
+    <style>
+      .flex-container {
+        display: flex;
+        list-style: none;
+        /* Then we define the flow direction 
+          and if we allow the items to wrap 
+          * Remember this is the same as:
+          * flex-direction: row;
+          * flex-wrap: wrap;
+          */
+        flex-flow: row wrap;
+        gap: 10px;
+        justify-content: space-around;
+      }
+      .flex-item {
+        width: 200px;
+        height: 150px;
+        line-height: 150px;
+        background-color: tomato;
+        color: white;
+        gap: 10px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
     <ul class="flex-container">
-        <li class="flex-item">1</li>
-        <li class="flex-item">2</li>
-        <li class="flex-item">3</li>
-        <li class="flex-item">4</li>
-        <li class="flex-item">5</li>
-        <li class="flex-item">6</li>
-      </ul>
-</body>
+      <li class="flex-item">1</li>
+      <li class="flex-item">2</li>
+      <li class="flex-item">3</li>
+      <li class="flex-item">4</li>
+      <li class="flex-item">5</li>
+      <li class="flex-item">6</li>
+    </ul>
+  </body>
 </html>
