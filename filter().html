@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filter Method practice</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      const arr = [
+        { id: 15 },
+        { id: -1 },
+        { id: 0 },
+        { id: 3 },
+        { id: 12.2 },
+        {},
+        { id: null },
+        { id: NaN },
+        { id: "undefined" },
+      ];
+      let invalidEntries = 0;
+
+      function filterById(item) {
+        if (Number.isFinite(item.id) && item.id !== 0) {
+          return true;
+        }
+        invalidEntries++;
+        return false;
+      }
+      const arrById = arr.filter(filterById);
+      console.log("Filtered Array:\n", arrById);
+
+      console.log("Number of invalid entries = ", invalidEntries);
+    </script>
+  </body>
 </html>
