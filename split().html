@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>split practice</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        
+      let names = "Prodip, Bain, Partho";
+      let arr = names.split(", ");
+      for (let name of arr) {
+        console.log(`A message to ${name}.`);
+      }
     </script>
-</body>
+  </body>
 </html>
