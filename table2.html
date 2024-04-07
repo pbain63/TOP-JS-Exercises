@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Another Table example</title>
+    <style>
+      tr:first-of-type td:last-of-type {
+        width: 60px;
+        background-color: #505050;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      td,
+      th {
+        border: 1px solid rgb(160 160 160);
+        padding: 8px 10px;
+      }
+
+      tr:nth-of-type(odd) td {
+        background-color: #eee;
+      }
+
+      tr th[scope="row"] {
+        background-color: #d6ecd4;
+      }
+    </style>
   </head>
   <body>
     <table>
