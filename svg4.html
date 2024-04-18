@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more svg and css</title>
+    <style>
+      path {
+        d: path("M150, 10 L40, 200 L260, 200 L260, 200Z");
+        fill: red;
+        transition: all 0.5s ease;
+      }
+      path:active {
+        d: path("M220, 10 L40, 10 L40, 220 L220, 220Z");
+        fill: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <svg height="250" width="300">
+      <!-- <path d="M150 10 L40 200 L260 200Z" /> -->
+      <path />
+    </svg>
+  </body>
+</html>
