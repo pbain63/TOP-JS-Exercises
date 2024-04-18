@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG and Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+      :root {
+        --color-1: red;
+        --color-2: green;
+        --color-3: blue;
+        --color-4: #4c6edb;
+        --color-5: #39e916;
+        --color-6: #af32e0;
+        --color-7: #ddc915;
+        --color-8: #19c1df;
+        --color-9: #cf971e;
+        --color-10: #cf1b7e;
+      }
+
+      .shape {
+        cy: 50;
+        r: 20;
+        animation: moveCircle 1250ms ease-in-out both infinite;
+      }
+
+      .shape:nth-child(1) {
+        cx: 60;
+        fill: var(--color-1);
+      }
+
+      .shape:nth-child(2) {
+        cx: 120;
+        fill: var(--color-2);
+        animation-delay: 100ms;
+      }
+
+      .shape:nth-child(3) {
+        cx: 180;
+        fill: var(--color-3);
+        animation-delay: 200ms;
+      }
+
+      .shape:nth-child(4) {
+        cx: 240;
+        fill: var(--color-4);
+        animation-delay: 300ms;
+      }
+
+      .shape:nth-child(5) {
+        cx: 300;
+        fill: var(--color-5);
+        animation-delay: 400ms;
+      }
+
+      .shape:nth-child(6) {
+        cx: 360;
+        fill: var(--color-6);
+        animation-delay: 500ms;
+      }
+
+      .shape:nth-child(7) {
+        cx: 420;
+        fill: var(--color-7);
+        animation-delay: 600ms;
+      }
+
+      .shape:nth-child(8) {
+        cx: 480;
+        fill: var(--color-8);
+        animation-delay: 700ms;
+      }
+
+      .shape:nth-child(9) {
+        cx: 540;
+        fill: var(--color-9);
+        animation-delay: 800ms;
+      }
+
+      .shape:nth-child(10) {
+        cx: 600;
+        fill: var(--color-10);
+        animation-delay: 900ms;
+      }
+
+      @keyframes moveCircle {
+        50% {
+            cy: 150;
+            r: 13;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="700" height="550">
+      <circle class="shape" />
+      <circle class="shape" />
+      <circle class="shape" />
+      <circle class="shape" />
+      <circle class="shape" />
+      <circle class="shape" />
+      <circle class="shape" />
+      <circle class="shape" />
+      <circle class="shape" />
+      <circle class="shape" />
+    </svg>
+  </body>
+</html>
