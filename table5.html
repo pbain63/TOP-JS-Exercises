@@ -5,34 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tables practice</title>
     <style>
-      table,
-      td,
-      th {
-        border: 1px solid red;
+      body {
+        background: #ccc;
+      }
+      .wrap {
+        width: 300px;
+        margin: 0 auto;
+        background: white;
       }
       table {
-        border-collapse: collapse;
+        border: 1px solid red;
+        margin: 5px 0;
+      }
+      .nowrap {
+        white-space: nowrap;
+      }
+      .many-cells td {
+        padding: 5px;
+        border: 1px solid green;
       }
     </style>
   </head>
   <body>
-    <table>
-      <colgroup>
-        <!-- <col /> -->
-        <col style="background-color: yellow" span="2" />
-      </colgroup>
-      <tr>
-        <th>Data 1</th>
-        <th>Data 2</th>
-      </tr>
-      <tr>
-        <td>Calcutta</td>
-        <td>Orange</td>
-      </tr>
-      <tr>
-        <td>Robots</td>
-        <td>Jazz</td>
-      </tr>
-    </table>
+    <div class="wrap">
+      <table>
+        <tr>
+          <td class="nowrap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </td>
+        </tr>
+      </table>
+      <table class="many-cells">
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+          <td>a</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
