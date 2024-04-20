@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tables practice</title>
     <style>
-      table,
-      thead,
-      tbody,
-      tfoot,
-      tr,
-      td,
-      th,
-      caption {
-        display: inline;
+      body {
+        font: normal medium/1.4 sans-serif;
       }
-      tbody tr:nth-child(odd) {
-        background: #eee;
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 0.25rem;
+        text-align: left;
+        border: 1px solid #ccc;
+      }
+      td:hover {
+        background-color: bisque;
+      }
+      tbody tr:hover{
+        background-color: #eee;
       }
     </style>
   </head>
