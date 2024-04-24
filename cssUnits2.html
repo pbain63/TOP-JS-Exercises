@@ -4,9 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scroll Indicator</title>
+    <style>
+        html,body {
+            margin: 0;
+        }
+        main{
+            margin-top: 128px;
+        }
+        @supports (height: 100vh) {
+            body{
+                background: linear-gradient(to right top, #0089f2 50%, #DDD 50%);
+                background-size: 100% calc(100% - 100vh + 129px);
+                background-repeat: no-repeat;
+            }
+            body:before{
+                content: '';
+                position: fixed;
+                top: 128px;
+                bottom: 0;
+                width: 100%;
+                z-index: -1;
+                background: white;
+
+
+            }
+        }
+        header{
+            position: fixed;
+            top: 0;
+            height: 125px;
+            width: 100%;
+            background: white;
+
+        }
+        main,header{
+            padding: 10px 10%;
+            box-sizing: border-box;
+        }
+    </style>
   </head>
   <body>
-    HTML SCSS Result Skip Results Iframe
     <header>
       <h1>Scroll Indicator</h1>
     </header>
@@ -373,7 +410,5 @@
         consectetur. Nullam quis risus eget urna mollis ornare vel eu leo.
       </p>
     </main>
-
-    Resources
   </body>
 </html>
