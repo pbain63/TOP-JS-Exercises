@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ellipsis practice</title>
+    <style>
+      h1 {
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        padding: 20px;
+        /* font-size: 1.3rem; */
+        /* margin: 0; */
+        background: whitesmoke;
+        /* resize:horizontal; */
+      }
+      body {
+        height: 100vh;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        background: #ccc;
+      }
+    </style>
   </head>
   <body>
     <h1>This little piggy went to market and this little piggy stayed home.</h1>
