@@ -1,0 +1,126 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header,
+footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+
+@font-face {
+  font-family: "afta_serifregular";
+  src: url("fonts/aftaserifthin-regular-webfont.woff2") format("woff2"),
+    url("fonts/aftaserifthin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bungee_regularregular";
+  src: url("fonts/bungee-regular-webfont.woff2") format("woff2"),
+    url("fonts/bungee-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+h2 {
+  font-family: "bungee_regularregular", sans-serif;
+  letter-spacing: 0.1rem;
+}
+p,
+ul,
+ol {
+  font-family: "afta_serifregular", serif;
+  /* font-size: 10px; */
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.text-indentation {
+  text-indent: 20px;
+}
+
+a {
+  color: #a66;
+  outline: none;
+}
+
+img {
+  width: 1rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+}
+
+.nav-menu{
+  list-style: none;
+  border: 1px solid #a66;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  line-height: 3.9rem;
+  text-align: center;
+  /* margin: 0 auto; */
+}
