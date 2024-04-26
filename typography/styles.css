@@ -1,0 +1,15 @@
+/* bad css styles. For practice */
+@media (min-width: 50em){
+    html {
+        font-size: 175%;
+        
+    }
+
+}
+html {
+    font-size: calc(0.75rem + 1.5vw);
+}
+
+article {
+    max-inline-size: 66ch;
+}
