@@ -4,11 +4,41 @@
     0.3em 0.3em 1em rgb(200 0 0 / 60%);
 } */
 
-body {
+/* body {
   margin: 0;
-}
-blockquote {
-  box-shadow: 0 0 .9em 2em maroon, 0 0 .9em 4em blueviolet;
+} */
+/* blockquote {
+  box-shadow: 0 0 .9em 2em mediumseagreen, 0 0 .9em 4em blueviolet;
   margin: 4em;
   padding: 1em;
+} */
+p {
+  /* white-space: nowrap; */
+  width: 5rem;
+  min-height: 5rem;
+}
+
+p.visible {
+  overflow: visible;
+}
+
+p.hidden {
+  overflow: hidden;
+}
+
+p.clip {
+  overflow: clip;
+  overflow-clip-margin: 1em;
+}
+
+p.scroll {
+  overflow: scroll;
+}
+
+p.auto {
+  overflow: auto;
+}
+
+p.overlay {
+  overflow: overlay;
 }
