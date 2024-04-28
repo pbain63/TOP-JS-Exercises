@@ -1,16 +1,5 @@
-div {
-  border: 0.5rem outset red;
-  outline: 0.5rem solid khaki;
-  box-shadow: 0 0 0 2rem skyblue;
-  border-radius: 12px;
-  font: bold 1rem sans-serif;
-  margin: 2rem;
-  padding: 1rem;
-  outline-offset: 0.5rem;
-}
-
 blockquote {
   padding: 20px;
-  box-shadow: inset 0 -3em 3em rgb(0, 200, 0 / 30%), 0 0 0 2px white,
-    0.3em 0.3em 1em rgb(200, 0, 0 / 60%);
+  box-shadow: inset 0 -3em 3em rgb(0 200 0 / 30%), 0 0 0 2px white,
+    0.3em 0.3em 1em rgb(200 0 0 / 60%);
 }
