@@ -12,33 +12,23 @@
   margin: 4em;
   padding: 1em;
 } */
-p {
-  /* white-space: nowrap; */
+/* p {
+  white-space: nowrap;
   width: 5rem;
   min-height: 5rem;
-}
+} */
 
-p.visible {
+/* p.visible {
   overflow: visible;
-}
+} */
 
-p.hidden {
-  overflow: hidden;
+h1 {
+  color: blue;
 }
-
-p.clip {
-  overflow: clip;
-  overflow-clip-margin: 1em;
+h2 {
+  background-color: blue;
+  color: white;
 }
-
-p.scroll {
-  overflow: scroll;
-}
-
-p.auto {
-  overflow: auto;
-}
-
-p.overlay {
-  overflow: overlay;
+span {
+  font-size: 200%;
 }
