@@ -1,0 +1,5 @@
+
+article:nth-child(3n-1) {
+  /* color: blueviolet; */
+  background-color: red;
+}
