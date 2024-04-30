@@ -46,7 +46,26 @@ p::first-letter {
   content: " 😎 🥸 🤓";
   color:cadetblue;
 } */
-#p4:hover::first-line {
+/* #p4:hover::first-line {
   color: red;
   text-transform: uppercase;
+} */
+
+div[lang] {
+  font-weight: bold;
+}
+div:not([lang]) {
+  font-style: italic;
+}
+div[lang~="en-us"] {
+  color: blue;
+}
+div[lang="pt"] {
+  color: green;
+}
+div[lang|="zh"] {
+  color: red;
+}
+idv[data-lang="zh-Hant-TW"] {
+  color: purple;
 }
