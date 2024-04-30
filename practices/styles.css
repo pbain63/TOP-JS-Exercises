@@ -1,15 +1,15 @@
-ol li {
+ /* ol li {
   counter-increment: li;
   display: list-item;
-}
+} 
 
 ol li::marker {
   display: list-item;
   color: red;
   font-weight: bold;
   content: "#" counter(li) " ";
-  /* content: "🧡 "; */
-}
+
+} 
 
 ul li::marker {
   color: blueviolet;
@@ -18,4 +18,35 @@ ul li::marker {
 body {
   line-height: 1.4;
   font-family: system-ui;
+}
+
+ol li:nth-of-type(1)::first-letter{
+  color: aqua;
+} */
+
+/* 
+.p2 {
+  color: aqua !important;
+}
+
+p::first-letter {
+  color: red;
+}
+#p3::selection {
+  color: bisque;
+}
+#p4::selection {
+  text-shadow: 1px 1px 0 blueviolet;
+} */
+/* h2::before {
+  content: "Prodip ";
+  
+}
+#p4::after {
+  content: " 😎 🥸 🤓";
+  color:cadetblue;
+} */
+#p4:hover::first-line {
+  color: red;
+  text-transform: uppercase;
 }
