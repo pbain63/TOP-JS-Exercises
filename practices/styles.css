@@ -1,5 +1,13 @@
+ol li::marker {
+  color: red;
+  font-weight: bold;
+} 
 
-article:nth-child(3n-1) {
-  /* color: blueviolet; */
-  background-color: red;
+ul li::marker {
+  color: blueviolet;
+  font-size: 150%;
+}
+body {
+  line-height: 1.4;
+  font-family: system-ui;
 }
