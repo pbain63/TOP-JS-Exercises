@@ -1,4 +1,4 @@
- /* ol li {
+/* ol li {
   counter-increment: li;
   display: list-item;
 } 
@@ -51,21 +51,42 @@ p::first-letter {
   text-transform: uppercase;
 } */
 
-div[lang] {
-  font-weight: bold;
+ ol[type="a"]:first-child {
+  list-style-type: lower-alpha;
+  background-color: red;
 }
-div:not([lang]) {
-  font-style: italic;
+ 
+ol[type="i" s] {
+  list-style-type: lower-alpha;
+  background-color: lime;
 }
-div[lang~="en-us"] {
-  color: blue;
+ol[type="I" s] {
+  list-style-type: upper-alpha;
+  background-color: grey;
 }
-div[lang="pt"] {
-  color: green;
+ol[type="a" i] {
+  list-style-type: upper-alpha;
+  background-color: green;
+} 
+
+/* Case-sensitivity depends on document language */
+/* ol[type="a"]:first-child {
+  list-style-type: lower-alpha;
+  background-color: red;
+} 
+
+ol[type="i" s] {
+  list-style-type: lower-alpha;
+  background: lime;
 }
-div[lang|="zh"] {
-  color: red;
+
+ol[type="I" s] {
+  list-style-type: upper-alpha;
+  background: grey;
 }
-idv[data-lang="zh-Hant-TW"] {
-  color: purple;
+
+ol[type="a" i] {
+  list-style-type: upper-alpha;
+  background-color: green;
 }
+*/
