@@ -51,42 +51,43 @@ p::first-letter {
   text-transform: uppercase;
 } */
 
- ol[type="a"]:first-child {
-  list-style-type: lower-alpha;
-  background-color: red;
+body {
+  color: #666;
+  font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
 }
- 
-ol[type="i" s] {
-  list-style-type: lower-alpha;
-  background-color: lime;
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
 }
-ol[type="I" s] {
-  list-style-type: upper-alpha;
-  background-color: grey;
+th,
+td {
+  padding: 6px 15px;
 }
-ol[type="a" i] {
-  list-style-type: upper-alpha;
-  background-color: green;
-} 
-
-/* Case-sensitivity depends on document language */
-/* ol[type="a"]:first-child {
-  list-style-type: lower-alpha;
-  background-color: red;
-} 
-
-ol[type="i" s] {
-  list-style-type: lower-alpha;
-  background: lime;
+th {
+  background: #42444e;
+  color: #fff;
+  text-align: left;
 }
-
-ol[type="I" s] {
-  list-style-type: upper-alpha;
-  background: grey;
+tr:first-child th:first-child {
+  border-top-left-radius: 6px;
 }
-
-ol[type="a" i] {
-  list-style-type: upper-alpha;
-  background-color: green;
+tr:first-child th:last-child {
+  border-top-right-radius: 6px;
 }
-*/
+td {
+  border-right: 1px solid #c6c9cc;
+  border-bottom: 1px solid #c6c9cc;
+}
+td:first-child {
+  border-left: 1px solid #c6c9cc;
+}
+tr:nth-child(even) td {
+  background: #eaeaed;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
