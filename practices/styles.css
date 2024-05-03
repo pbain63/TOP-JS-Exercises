@@ -51,8 +51,22 @@ p::first-letter {
   text-transform: uppercase;
 } */
 
-a:active {
-  position: relative;
-  top: 3px;
-  color: rgb(120, 253, 253);
+.sticky {
+  background-color: red;
+  color: white;
+  position: sticky;
+  top: 10px;
+  padding: 1.1em;
+  font-size: 1.1em;
+}
+
+.long{
+  font-size: 3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  min-height: 35ch;
+  padding: 1em;
+  text-transform: uppercase;
+  background-image: url(https://www.pexels.com/photo/coastal-sunset-views-20875624/);
+  /* background-image: url(./pexels-lukas-rodriguez-1845331-20875624.jpg); */
+  
 }
