@@ -51,31 +51,19 @@ p::first-letter {
   text-transform: uppercase;
 } */
 
-.parent {
-  padding: 5px;
-  background-color: #00AAFF;
+* {
+  box-sizing: border-box;
 }
-.child {
-  padding: 5px;
+.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
 }
-.child-one {
-  background-color: rgb(116, 255, 116);
-}
-.child-two {
-  background-color: rgb(248, 117, 117);
-}
-.child-three {
-  background-color: rgb(255, 116, 232);
-}
-
-.parent {
+#two {
   position: relative;
-  /* top: 100px; */
-  min-height: 200vh;
-}
-
-.child-one {
-  position:absolute;
-  right: 0px;
-  top: 0px;
+  background-color: blue;
+  top: 20px;
+  left: 20px;
 }
