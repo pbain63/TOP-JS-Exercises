@@ -51,38 +51,39 @@ p::first-letter {
   text-transform: uppercase;
 } */
 
-body {
-  min-height: 210vh;
+.utility-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-* {
-  box-sizing: border-box;
-}
+.parent_container {
+  background-color: blueviolet;
+  padding: 10px;
+  width: 600px;
+  /* min-height: 400px; */
 
-dl > div {
-  background: #fff;
-  padding: 24px 0 0 0;
-}
+  /* position: relative; */
+  margin: auto;
 
-dt {
-  background: #b8c1c8;
-  border-bottom: 1px solid #989ea4;
-  border-top: 1px solid #717d85;
-  color: #fff;
-  font: bold 18px/21px Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 2px 0 0 12px;
-  position: -webkit-sticky;
+  min-height: 300vh;
+  /* min-height: 175ch; */
+}
+.child_1,
+.child_2,
+.child_3 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  background-color: brown;
+  width: 300px;
+  min-height: 100px;
+  color: antiquewhite;
+  margin: 5px;
+  border-radius: 5px;
+}
+.child_2 {
   position: sticky;
-  top: -1px;
-}
-
-dd {
-  font: bold 20px/45px Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding: 0 0 0 12px;
-  white-space: nowrap;
-}
-
-dd + dd {
-  border-top: 1px solid #ccc;
+  top: 0px;
+  border: 3px solid red;
 }
