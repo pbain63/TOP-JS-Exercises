@@ -50,40 +50,38 @@ p::first-letter {
   color: red;
   text-transform: uppercase;
 } */
-
-.utility-flex {
+:root {
+  --header: 3rem;
+  --footer: 40px;
+  --main: calc(100vh - calc(var(--header) + var(--footer)));
+}
+body {
+  margin: 0;
+  /* padding: 0; */
+  border: 0px solid transparent;
+  background-color: #7a7a7a;
+}
+#container {
+  border: 0px solid transparent;
+  height: 100vh;
+  color: white;
+}
+#container > * {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.parent_container {
-  background-color: blueviolet;
-  padding: 10px;
-  width: 600px;
-  /* min-height: 400px; */
-
-  /* position: relative; */
-  margin: auto;
-
-  min-height: 300vh;
-  /* min-height: 175ch; */
+#header {
+  height: var(--header);
+  background-color: #111111;
 }
-.child_1,
-.child_2,
-.child_3 {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-weight: 600;
-  background-color: brown;
-  width: 300px;
-  min-height: 100px;
-  color: antiquewhite;
-  margin: 5px;
-  border-radius: 5px;
+#mainContent {
+  height: var(--main);
+  background-color: #343434;
+  margin-right: auto;
+  margin-left: auto;
 }
-.child_2 {
-  position: sticky;
-  top: 0px;
-  border: 3px solid red;
+#footer {
+  height: var(--footer);
+  background-color: #232323;
 }
