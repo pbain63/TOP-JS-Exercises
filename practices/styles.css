@@ -50,38 +50,15 @@ p::first-letter {
   color: red;
   text-transform: uppercase;
 } */
-:root {
-  --header: 3rem;
-  --footer: 40px;
-  --main: calc(100vh - calc(var(--header) + var(--footer)));
-}
-body {
-  margin: 0;
-  /* padding: 0; */
-  border: 0px solid transparent;
-  background-color: #7a7a7a;
-}
-#container {
-  border: 0px solid transparent;
-  height: 100vh;
-  color: white;
-}
-#container > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#header {
-  height: var(--header);
-  background-color: #111111;
-}
-#mainContent {
-  height: var(--main);
-  background-color: #343434;
-  margin-right: auto;
-  margin-left: auto;
-}
-#footer {
-  height: var(--footer);
-  background-color: #232323;
+
+.banner {
+  position: absolute;
+  left: 40px;
+  width: calc(100% - 80px);
+  border: 1px solid black;
+  box-shadow: 1px 2px;
+  background-color: yellow;
+  padding: 6px;
+  text-align: center;
+  box-sizing: border-box;
 }
