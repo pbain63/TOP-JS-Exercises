@@ -51,27 +51,13 @@ p::first-letter {
   text-transform: uppercase;
 } */
 
-* {
-  box-sizing: border-box;
+.cool-div {
+  --main-bg: red;
 }
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-something: antialiased;
-  -moz-osx-font-something: grayscale;
-  background-color: hsla(214, max((10vw + 20%), 84%), 61%, 1);
+.cool-paragraph {
+  background-color: var(--main-bg);
+  font-size: clamp(1.2rem, 4vw, 36px);
 }
-
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: clamp(1rem, 2 vw, 24px);
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-.item {
-  padding: 3rem, 1rem;
-  background-color: #eee;
-  border-radius: 7px;
+.boring-paragraph {
+  background-color: var(--main-bg);
 }
