@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <script>
+      let root = document.documentElement;
+      root.addEventListener("mousemove", (e) => {
+        root.style.setProperty('--mouse-x', e.clientX + "px");
+        root.style.setProperty('--mouse-y', e.clientY + "px");
+      });
+    </script>
     <div class="mover"></div>
   </body>
 </html>
