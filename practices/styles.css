@@ -50,17 +50,21 @@ p::first-letter {
   color: red;
   text-transform: uppercase;
 } */
+
 @property --text-color {
   syntax: "<color>";
-  inherits: false;
-  initial-value: cornflowerblue;
+  inherits: true;
+  initial-value: red;
 }
+
+:root {
+  --text-color: 16px;
+}
+
 p {
   color: blue;
 }
 
 p {
-  /* oops, not a valid color */
-  color: 16px;
-  color: var(--text-color);
+  /* color: var(--text-color); */
 }
