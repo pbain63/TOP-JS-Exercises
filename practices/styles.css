@@ -51,20 +51,11 @@ p::first-letter {
   text-transform: uppercase;
 } */
 
-@property --text-color {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: red;
+div {
+  --color: red !important;
+  background-color: var(--color);
 }
-
-:root {
-  --text-color: 16px;
-}
-
-p {
-  color: blue;
-}
-
-p {
-  /* color: var(--text-color); */
+#color2 {
+  --color: yellow;
+  background-color: var(--color);
 }
