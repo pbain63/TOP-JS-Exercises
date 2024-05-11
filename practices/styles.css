@@ -50,9 +50,3 @@ p::first-letter {
   color: red;
   text-transform: uppercase;
 } */
-
-div {
-  position: absolute;
-  left: 2in;
-  top: 2in;
-}
