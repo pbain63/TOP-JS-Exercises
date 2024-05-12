@@ -8,11 +8,26 @@
   </head>
 
   <body>
-    <ul>
-      <li>
-        <input type="checkbox" name="power" id="power">
-        <label for="power"><span class="on">On</span> <span class="off">Off</span></label>
-      </li>
-    </ul>
+    <label for="price">Choose a maximum house price: </label>
+    <input
+      type="range"
+      id="price"
+      name="price"
+      min="50000"
+      max="500000"
+      step="100"
+      value="250000"
+    />
+    <output for="price" class="price-output"></output>
+    <script>
+      const price = document.querySelector("#price");
+      const output = document.querySelector(".price-output");
+
+      output.textContent = price.value;
+
+      price.addEventListener("input", () => {
+        output.textContent = price.value;
+      });
+    </script>
   </body>
 </html>
