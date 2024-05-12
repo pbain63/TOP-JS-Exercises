@@ -64,11 +64,19 @@ p::first-letter {
 } */
 
 input {
-  accent-color: red;
-  display: block;
-  width: 30px;
-  height: 30px;
+  margin-bottom: 1em;
 }
-input.custom {
-  accent-color: aqua;
+button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+fieldset, input, textarea {
+  width: 400px;
+}
+label {
+  /* text-align: right; */
+  /* margin-top: 1em; */
+}
+fieldset, label {
+  /* display: inline-block; */
 }
