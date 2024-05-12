@@ -14,13 +14,20 @@
 
         <p>Required fields are labelled with "required".</p>
         <div>
-          <label for="fname">First name: </label>
-          <input id="fname" name="fname" type="text" required />
+          <label for="name">Name: </label>
+          <input id="name" name="name" type="text" required />
           <span></span>
         </div>
         <div>
-          <label for="lname">Last name: </label>
-          <input id="lname" name="lname" type="text" required />
+          <label for="age">Age (must be 12+): </label>
+          <input
+            id="age"
+            name="age"
+            type="number"
+            min="12"
+            max="120"
+            required
+          />
           <span></span>
         </div>
         <div>
