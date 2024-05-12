@@ -52,8 +52,21 @@ p::first-letter {
 } */
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  margin: 0;
+  /* padding: 0; */
+}
+div {
+  margin: 20px;
+}
+button {
+  margin-left: 1.3rem;
+  position: relative;
+  padding: 5px;
+}
+button:hover {
+  color: blueviolet;
+}
+button:active {
+  top: 3px;
+  color:cornflowerblue;
 }
