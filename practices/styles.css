@@ -1,6 +1,6 @@
 body {
   font-family: "Josefin Sans", sans-serif;
-  margin: 20px auto;
+  /* margin: 20px auto; */
   max-width: 460px;
 }
 
@@ -47,18 +47,33 @@ input:focus {
 input + span {
   position: relative;
 }
+input + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  padding: 5px 10px;
+  top: -26px;
+}
 
 input:required + span::after {
   content: "required";
-  font-size: 0.7rem;
-  position: absolute;
+  
+  
   color: white;
   background-color: black;
-  padding: 5px 10px;
-  top: -26px;
+  
   left: -70px;
 }
 /*  */
+input:out-of-range + span::after {
+  content: "Age limit 12 to 120";
+  background-color: red;
+  color: white;
+  width: 95px;
+  left: -122px;
+  /* top: -38px; */
+  /* right: 2px; */
+}
+
 input:invalid + span::before {
   content: "✖";
   color: red;
