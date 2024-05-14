@@ -7,30 +7,11 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <form action="https://httpbin.org/post" method="post">
-      <div>
-        <label for="first_name">First Name:</label>
-        <input
-          type="text"
-          id="first_name"
-          name="first_name"
-          placeholder="Albert..."
-        />
-      </div>
-      <div>
-        <label for="">Last Name:</label>
-        <input
-          type="text"
-          name="last_name"
-          id="last_name"
-          placeholder="Einstein..."
-        />
-      </div>
-      <div>
-        <label for="age">Age:</label>
-        <input type="number" name="age" id="age" />
-      </div>
-    </form>
-    <button type="submit">Submit</button>
+    <div>
+      <label for="user_name">What's your name?</label>
+      <input type="text" name="user_name" id="user_name">
+      <button type="submit" class="greet-btn">Submit</button>
+    </div>
+    <h1 class="greet-output"></h1>
   </body>
 </html>
