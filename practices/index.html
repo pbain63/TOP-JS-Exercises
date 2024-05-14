@@ -9,10 +9,16 @@
   <body>
     <div>
       <label for="user_name">What's your name?</label>
-      <input type="text" name="user_name" id="user_name" />
+      <input type="datetime-local" id="user_name" name="user_name" />
       <button type="submit" class="greet-btn">Submit</button>
     </div>
     <h1 class="greet-output"></h1>
+
+    <label for="comment">Comment:</label>
+    <br>
+    <textarea name="comment" id="comment" rows="20" cols="60">
+Comment here</textarea
+    >
     <script>
       const name = document.querySelector("#user_name");
       const greetButton = document.querySelector(".greet-btn");
