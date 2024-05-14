@@ -51,22 +51,3 @@ p::first-letter {
   text-transform: uppercase;
 } */
 
-body {
-  margin: 0;
-  /* padding: 0; */
-}
-div {
-  margin: 20px;
-}
-button {
-  margin-left: 1.3rem;
-  position: relative;
-  padding: 5px;
-}
-button:hover {
-  color: blueviolet;
-}
-button:active {
-  top: 3px;
-  color:cornflowerblue;
-}
