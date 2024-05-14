@@ -9,9 +9,18 @@
   <body>
     <div>
       <label for="user_name">What's your name?</label>
-      <input type="text" name="user_name" id="user_name">
+      <input type="text" name="user_name" id="user_name" />
       <button type="submit" class="greet-btn">Submit</button>
     </div>
     <h1 class="greet-output"></h1>
+    <script>
+      const name = document.querySelector("#user_name");
+      const greetButton = document.querySelector(".greet-btn");
+      const greetOutput = document.querySelector(".greet-output");
+
+      greetButton.addEventListener("click", (event) => {
+        greetOutput.textContent = `Hello ${name.value}`;
+      });
+    </script>
   </body>
 </html>
