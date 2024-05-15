@@ -1,108 +1,22 @@
-/* ol li {
-  counter-increment: li;
-  display: list-item;
-} 
-
-ol li::marker {
-  display: list-item;
-  color: red;
-  font-weight: bold;
-  content: "#" counter(li) " ";
-
-} 
-
-ul li::marker {
-  color: blueviolet;
-  font-size: 150%;
-}
-body {
-  line-height: 1.4;
-  font-family: system-ui;
+h1 {
+  margin-top: 0;
 }
 
-ol li:nth-of-type(1)::first-letter{
-  color: aqua;
-} */
-
-/* 
-.p2 {
-  color: aqua !important;
-}
-
-p::first-letter {
-  color: red;
-}
-#p3::selection {
-  color: bisque;
-}
-#p4::selection {
-  text-shadow: 1px 1px 0 blueviolet;
-} */
-/* h2::before {
-  content: "Prodip ";
-  
-}
-#p4::after {
-  content: " 😎 🥸 🤓";
-  color:cadetblue;
-} */
-/* #p4:hover::first-line {
-  color: red;
-  text-transform: uppercase;
-} */
-
-/* .form-control {
-  font-family: system-ui, sans-serif;
-  font-weight: bold;
-  line-height: 1.1;
-
-
-  font-size: 2rem;
-  display: grid;
-  grid-template-columns: 1em auto;
-  gap: 0.5em;
-} */
-
-body {
-  /* text-align: center; */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 form {
-  display: inline-block;
+  margin: 0 auto;
+  width: 400px;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
 }
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-form li + li {
-  margin-top: 1em;
-}
+
 label {
   display: inline-block;
-  min-width: 90px;
-  text-align: right;
-}
-input,
-textarea {
-  font: 1em sans-serif;
-  width: 300px;
-  box-sizing: border-box;
-  border: 1px solid #999;
-}
-input:focus,
-textarea:focus {
-  border-color: #000;
-}
-textarea {
-  vertical-align: top;
-  height: 5em;
-}
-.button {
-  padding-left: 90px;
-}
-button {
-  margin-left: 0.5em;
+  min-width: 120px;
+  /* text-align: right; */
 }
