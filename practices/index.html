@@ -10,10 +10,24 @@
   <body>
     <input
       type="image"
-      alt="Click me!"
+      alt="Click"
       src="./htmlcode.png"
       width="80"
       height="30"
+    />
+    <input type="file" id="file" name="file" accept="image/*" multiple />
+    <input type="file" id="file" name="file" accept="image/*;capture=camera" />
+    <input
+      type="file"
+      id="file"
+      name="file"
+      accept="video/*;capture=camcorder"
+    />
+    <input
+      type="file"
+      id="file"
+      name="file"
+      accept="audio/*;capture=microphone"
     />
   </body>
 </html>
