@@ -9,19 +9,56 @@
 
   <body>
     <form>
-      <ul>
-        <li>
-          <label for="id">User ID:</label>
-          <input type="text" id="id" name="user_id" />
-        </li>
-        <li>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" />
-        </li>
-        <li>
-          <button type="submit">Log in</button>
-        </li>
-      </ul>
+      <fieldset>
+        <legend>Who is your favorite pony?</legend>
+        <ul>
+          <li>
+            <input
+              type="radio"
+              id="pinkie"
+              name="pony"
+              value="pinkie"
+              checked
+            />
+            <label for="pinkie">Pinkie Pie</label>
+          </li>
+          <li>
+            <input type="radio" id="rainbow" name="pony" value="rainbow" />
+            <label for="rainbow">Rainbow Dash</label>
+          </li>
+          <li>
+            <input type="radio" id="twilight" name="pony" value="twilight" />
+            <label for="twilight">Twilight Sparkle</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Hotdog preferences</legend>
+        <ul>
+          <li>
+            <input type="checkbox" id="vegan" name="hotdog" value="vegan" />
+            <label for="vegan">Vegan</label>
+          </li>
+          <li>
+            <input type="checkbox" id="onions" name="hotdog" value="onions" />
+            <label for="onions">Onions</label>
+          </li>
+          <li>
+            <input type="checkbox" id="onions" name="hotdog" value="onions" />
+            <label for="chicken">Chicken</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="mushrooms"
+              name="hotdog"
+              value="mushrooms"
+            />
+            <label for="mushrooms">Mushrooms</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button>Submit</button>
     </form>
   </body>
 </html>
