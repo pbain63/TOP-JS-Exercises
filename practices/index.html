@@ -9,55 +9,18 @@
 
   <body>
     <form>
-      <fieldset>
-        <legend>Who is your favorite pony?</legend>
-        <ul>
-          <li>
-            <input
-              type="radio"
-              id="pinkie"
-              name="pony"
-              value="pinkie"
-              checked
-            />
-            <label for="pinkie">Pinkie Pie</label>
-          </li>
-          <li>
-            <input type="radio" id="rainbow" name="pony" value="rainbow" />
-            <label for="rainbow">Rainbow Dash</label>
-          </li>
-          <li>
-            <input type="radio" id="twilight" name="pony" value="twilight" />
-            <label for="twilight">Twilight Sparkle</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset>
-        <legend>Hotdog preferences</legend>
-        <ul>
-          <li>
-            <input type="checkbox" id="vegan" name="hotdog" value="vegan" />
-            <label for="vegan">Vegan</label>
-          </li>
-          <li>
-            <input type="checkbox" id="onions" name="hotdog" value="onions" />
-            <label for="onions">Onions</label>
-          </li>
-          <li>
-            <input type="checkbox" id="onions" name="hotdog" value="onions" />
-            <label for="chicken">Chicken</label>
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              id="mushrooms"
-              name="hotdog"
-              value="mushrooms"
-            />
-            <label for="mushrooms">Mushrooms</label>
-          </li>
-        </ul>
-      </fieldset>
+      <ul>
+        <li>
+          <label for="gallery-img">Choose gallery images to upload</label>
+          <input
+            type="file"
+            id="file"
+            name="file"
+            accept=".JPG, .PNG"
+            multiple
+          />
+        </li>
+      </ul>
       <button>Submit</button>
     </form>
   </body>
