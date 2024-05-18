@@ -1,9 +1,20 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
 li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-textarea {
+/* textarea {
   vertical-align: top;
 }
 label {
@@ -12,9 +23,9 @@ label {
   text-align: right;
 }
 h2 {
-    margin-left: 3.3rem;
+  margin-left: 3.3rem;
 }
 button {
-    margin-left: 5.25rem;
-    margin-top: 1rem;
-}
+  margin-left: 5.25rem;
+  margin-top: 1rem;
+} */
