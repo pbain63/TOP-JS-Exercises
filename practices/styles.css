@@ -1,69 +1,20 @@
-* {
-  box-sizing: border-box;
-}
-
 li {
-  width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
+textarea {
+  vertical-align: top;
+}
 label {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  position: relative;
+  display: inline-block;
+  width: 5rem;
+  text-align: right;
 }
-
-label span {
-  position: absolute;
+h2 {
+    margin-left: 3.3rem;
 }
-
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 44px;
-  height: 24px;
-  border-radius: 12px;
-  border: 2px solid black;
-  background: #eee;
-  transition: all 0.4s;
-}
-
-input[type="checkbox"]::before {
-  width: 16px;
-  height: 16px;
-  border-radius: 9px;
-  background-color: black;
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: 16%;
-  transition: all 0.4s;
-}
-
-input[type="checkbox"]:checked {
-  background-color: lightskyblue;
-  transition: all 0.4s;
-}
-
-input[type="checkbox"]:checked::before {
-  left: 35%;
-  transition: all 0.4s;
-}
-
-input[type="checkbox"] ~ label .on,
-input[type="checkbox"]:checked ~ label .off {
-  opacity: 0;
-}
-
-input[type="checkbox"] ~ label .off,
-input[type="checkbox"]:checked ~ label .on {
-  opacity: 1;
-}
-
-input:focus {
-  outline: 1px dotted black;
+button {
+    margin-left: 5.25rem;
+    margin-top: 1rem;
 }
