@@ -1,6 +1,6 @@
 body {
   font-family: "Josefin Sans", sans-serif;
-  /* margin: 20px auto; */
+  margin: 20px auto;
   max-width: 460px;
 }
 
@@ -17,12 +17,12 @@ legend {
 fieldset > div {
   margin-bottom: 20px;
   display: flex;
-  flex-flow: row wrap;
+ 
 }
 
 button,
 label,
-input {
+input [type="text"]{
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -44,54 +44,14 @@ input:focus {
   background-color: #eee;
 }
 
-input + span {
-  position: relative;
-}
-input + span::after {
-  font-size: 0.7rem;
-  position: absolute;
-  padding: 5px 10px;
-  top: -26px;
+input[type="text"]:disabled {
+  background-color: #eee;
+  border: 1px solid #ccc;
 }
 
-input:required + span::after {
-  content: "required";
-  
-  
-  color: white;
-  background-color: black;
-  
-  left: -70px;
+.disabled-label {
+  color: #aaa;
 }
-/*  */
-input:out-of-range + span::after {
-  content: "Age limit 12 to 120";
-  background-color: red;
-  color: white;
-  width: 95px;
-  left: -122px;
-  /* top: -38px; */
-  /* right: 2px; */
-}
-
-input:invalid + span::before {
-  content: "✖";
-  color: red;
-}
-input:valid + span::before {
-  content: "✓";
-  color: green;
-}
-
-input:invalid {
-  border: 2px solid red;
-}
-input + span::before {
-  position: absolute;
-  right: -20px;
-  top: 5px;
-}
-
 /*  */
 button {
   width: 60%;
