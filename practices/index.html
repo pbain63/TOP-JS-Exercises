@@ -9,81 +9,42 @@
 
   <body>
     <form>
-      <fieldset id="shipping">
-        <legend>Shipping address</legend>
+      <fieldset>
+        <legend>Check shipping details</legend>
         <div>
-          <label for="name1">Name: </label>
-          <input id="name1" name="name1" type="text" required />
+          <label for="name">Name: </label>
+          <input id="name" name="name" type="text" value="Mr Soft" readonly />
         </div>
         <div>
-          <label for="address1">Address: </label>
-          <input id="address1" name="address1" type="text" required />
+          <label for="address">Address: </label>
+          <textarea id="address" name="address" readonly>
+23 Elastic Way,
+Viscous,
+Bright Ridge,
+CA
+</textarea
+          >
         </div>
         <div>
-          <label for="pcode1">Zip/postal code: </label>
-          <input id="pcode1" name="pcode1" type="text" required />
-        </div>
-      </fieldset>
-      <fieldset id="billing">
-        <legend>Billing address</legend>
-        <div>
-          <label for="billing-checkbox">Same as shipping address:</label>
-          <input type="checkbox" id="billing-checkbox" checked />
-        </div>
-        <div>
-          <label for="name" class="billing-label disabled-label">Name: </label>
-          <input id="name" name="name" type="text" disabled required />
-        </div>
-        <div>
-          <label for="address2" class="billing-label disabled-label"
-            >Address:
-          </label>
-          <input id="address2" name="address2" type="text" disabled required />
-        </div>
-        <div>
-          <label for="pcode2" class="billing-label disabled-label"
-            >Zip/postal code:
-          </label>
-          <input id="pcode2" name="pcode2" type="text" disabled required />
+          <label for="pcode">Zip/postal code: </label>
+          <input id="pcode" name="pcode" type="text" value="94708" readonly />
         </div>
       </fieldset>
 
-      <div><button>Submit</button></div>
+      <fieldset>
+        <legend>Final instructions</legend>
+        <div>
+          <label for="sms-confirm">Send confirmation by SMS?</label>
+          <input id="sms-confirm" name="sms-confirm" type="checkbox" />
+        </div>
+        <div>
+          <label for="instructions">Any special instructions?</label>
+          <textarea id="instructions" name="instructions"></textarea>
+        </div>
+      </fieldset>
+
+      <div><button type="button">Amend details</button></div>
+      <div><button type="submit">Submit</button></div>
     </form>
-    <script>
-      document.addEventListener(
-        "DOMContentLoaded",
-        function () {
-          document
-            .getElementById("billing-checkbox")
-            .addEventListener("change", toggleBilling);
-        },
-        false
-      );
-
-      function toggleBilling() {
-        let billingItems = document.querySelectorAll(
-          '#billing input[type="text"]'
-        );
-
-        let billingLabels = document.querySelectorAll(".billing-label");
-
-        for (let i = 0; i < billingItems.length; i++) {
-          billingItems[i].disabled = !billingItems[i].disabled;
-
-          if (
-            billingLabels[i].getAttribute("class") ===
-            "billing-label disabled-label"
-          ) {
-            billingLabels[i].setAttribute("class", "billing-label");
-          } else {
-            billingLabels[i].setAttribute(
-              "class",
-              "billing-label disabled-label"
-            );
-          }
-        }
-      }
-    </script>
   </body>
 </html>
