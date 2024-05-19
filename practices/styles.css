@@ -1,5 +1,5 @@
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
   max-width: 460px;
 }
@@ -20,7 +20,9 @@ fieldset > div {
   flex-flow: row wrap;
 }
 
-button, label, input {
+button,
+label,
+input {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -37,7 +39,8 @@ input {
   border-radius: 5px;
 }
 
-input:hover, input:focus {
+input:hover,
+input:focus {
   background-color: #eee;
 }
 
@@ -53,9 +56,28 @@ input:required + span::after {
   background-color: black;
   padding: 5px 10px;
   top: -26px;
-  left:-70px;
+  left: -70px;
+}
+/*  */
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+input:valid + span::before {
+  content: "✓";
+  color: green;
 }
 
+input:invalid {
+  border: 2px solid red;
+}
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
+
+/*  */
 button {
   width: 60%;
   margin: 0 auto;
