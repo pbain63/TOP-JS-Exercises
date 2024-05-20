@@ -10,41 +10,24 @@
   <body>
     <form>
       <fieldset>
-        <legend>Check shipping details</legend>
-        <div>
-          <label for="name">Name: </label>
-          <input id="name" name="name" type="text" value="Mr Soft" readonly />
-        </div>
-        <div>
-          <label for="address">Address: </label>
-          <textarea id="address" name="address" readonly>
-23 Elastic Way,
-Viscous,
-Bright Ridge,
-CA
-</textarea
-          >
-        </div>
-        <div>
-          <label for="pcode">Zip/postal code: </label>
-          <input id="pcode" name="pcode" type="text" value="94708" readonly />
-        </div>
-      </fieldset>
+        <legend>Choose your favourite fruit</legend>
 
-      <fieldset>
-        <legend>Final instructions</legend>
-        <div>
-          <label for="sms-confirm">Send confirmation by SMS?</label>
-          <input id="sms-confirm" name="sms-confirm" type="checkbox" />
-        </div>
-        <div>
-          <label for="instructions">Any special instructions?</label>
-          <textarea id="instructions" name="instructions"></textarea>
-        </div>
+        <p>
+          <input type="radio" name="fruit" value="cherry" id="cherry" />
+          <label for="cherry">Cherry</label>
+          <span></span>
+        </p>
+        <p>
+          <input type="radio" name="fruit" value="banana" id="banana" checked />
+          <label for="banana">Banana</label>
+          <span></span>
+        </p>
+        <p>
+          <input type="radio" name="fruit" value="strawberry" id="strawberry" />
+          <label for="strawberry">Strawberry</label>
+          <span></span>
+        </p>
       </fieldset>
-
-      <div><button type="button">Amend details</button></div>
-      <div><button type="submit">Submit</button></div>
     </form>
   </body>
 </html>
