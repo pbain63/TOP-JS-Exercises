@@ -4,72 +4,51 @@ body {
   max-width: 460px;
 }
 
-fieldset {
-  padding: 10px 30px 0;
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-legend {
-  color: white;
-  background-color: black;
-  padding: 5px 10px;
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  vertical-align: -2px;
+  outline: none;
 }
 
-fieldset > div {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
- 
-}
-
-button,
-label,
-input [type="text"], textarea{
+input[type="radio"]::before {
+  content: "";
   display: block;
-  font-family: inherit;
-  font-size: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 6px;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
 }
 
-input[type="text"], textarea {
-  width: 50%;
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
 
-textarea {
-  height: 110px;
-  resize: none;
+input ~ span {
+  position: relative;
 }
 
-label {
-  width: 40%;
-}
-
-input {
-  box-shadow: inset 1px 1px 3px #ccc;
-  border-radius: 5px;
-}
-
-input:hover,
-input:focus, textarea:hover, textarea:focus {
-  background-color: #eee;
-}
-
-input:read-only, textarea:read-only {
-  border: 0;
-  box-shadow: none;
-  background-color: white;
-}
-
-textarea:read-write {
-  box-shadow: inset 1px 1px 3px #ccc;
-  border-radius: 5px;
-}
-/*  */
-button {
-  width: 60%;
-  margin: 20px auto;
+input:default ~ span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "Default";
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  top: -3px;
+  /* left: 8px; */
+  right: -65px;
+  
 }
