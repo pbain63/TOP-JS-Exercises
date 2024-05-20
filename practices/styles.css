@@ -1,7 +1,5 @@
 body {
   font-family: "Josefin Sans", sans-serif;
-  margin: 20px auto;
-  max-width: 460px;
 }
 
 input[type="radio"] {
@@ -12,19 +10,20 @@ input[type="radio"] {
 input[type="radio"] {
   width: 20px;
   height: 20px;
-  border: 2px solid gray;
   border-radius: 10px;
+  border: 2px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
   vertical-align: -2px;
   outline: none;
 }
 
 input[type="radio"]::before {
-  content: "";
   display: block;
+  content: " ";
   width: 10px;
   height: 10px;
-  background-color: red;
   border-radius: 6px;
+  background-color: red;
   font-size: 1.2em;
   transform: translate(3px, 3px) scale(0);
   transform-origin: center;
@@ -36,19 +35,17 @@ input[type="radio"]:checked::before {
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
 
-input ~ span {
-  position: relative;
+input[type="radio"]:indeterminate {
+  border: 2px solid red;
+  animation: 0.4s linear infinite alternate border-pulse;
 }
 
-input:default ~ span::after {
-  font-size: 0.7rem;
-  position: absolute;
-  content: "Default";
-  background-color: black;
-  color: white;
-  padding: 5px 10px;
-  top: -3px;
-  /* left: 8px; */
-  right: -65px;
-  
+@keyframes border-pulse {
+  from {
+    border: 2px solid blue;
+  }
+
+  to {
+    border: 6px solid red;
+  }
 }
