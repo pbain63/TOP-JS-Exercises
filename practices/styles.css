@@ -1,5 +1,7 @@
 body {
   font-family: "Josefin Sans", sans-serif;
+  width: 460px;
+  margin: 20px auto;
 }
 
 input[type="radio"] {
