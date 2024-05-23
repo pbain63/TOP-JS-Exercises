@@ -1,27 +1,15 @@
-form {
-  font: 1em sans-serif;
-  max-width: 320px;
-}
-
-p > label {
-  display: block;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-textarea,
-fieldset {
-  width: 100%;
-  border: 1px solid #333;
-  box-sizing: border-box;
+input[type="email"]::placeholder {
+  color: blue;
 }
 
 input:invalid {
-  box-shadow: 0 0 5px 1px red;
+  color:red;
+  /* border-color: red; */
+  border: 2px solid red;
 }
 
-input[name="fruit"]:invalid:focus,
-input[name="fruit"]:invalid:hover {
-  box-shadow: none;
+input:valid {
+  color: black;
+  border-radius: 15px;
 }
+
