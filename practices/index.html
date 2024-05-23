@@ -8,21 +8,20 @@
   </head>
 
   <body>
-    <form action="#" method="get" >
+    <form action="#" method="get">
       <div>
         <label for="credit">Credit Card number:</label>
         <input
           type="text"
           id="credit"
           name="credit"
-          minlength="16"
-          maxlength="20"
-          placeholder="Card no."
+          inputmode="numeric"
+          autocomplete="cc-number"
           required
         />
       </div>
 
-      <button type="submit" >submit</button>
+      <button type="submit">submit</button>
     </form>
   </body>
 </html>
