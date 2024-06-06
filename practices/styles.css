@@ -1,39 +1,35 @@
-body {
-  padding: 50px;
-  font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-.grid {
-  border: 5px solid rgb(111, 41, 97);
+.wrapper {
   display: grid;
-  grid-template-areas:
-    "one one two two"
-    "one one two two"
-    ". . four four"
-    "three three four four";
+  grid-template-columns: repeat(8, 1fr);
   gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 100px);
-  inline-size: 500px;
+  grid-auto-rows: 100px;
+  grid-template-areas:
+    "a a a a b b b b"
+    "a a a a b b b b"
+    "c c c c d d d d"
+    "c c c c d d d d";
+    /* background-color: aqua; */
+    border: 1px solid;
+    /* align-items:last baseline; */
 }
-.grid > * {
-  background-color: rgba(111, 41, 97, 0.4);
-  border-radius: 5px;
-  padding: 10px;
+.item1 {
+  grid-area: a;
 }
-.one {
-  grid-area: one;
+.item2 {
+  grid-area: b;
+  justify-self: start;
 }
-.two {
-  grid-area: two;
+
+.item3 {
+  grid-area: c;
+  justify-self: end;
 }
-.three {
-  grid-area: three;
+
+.item4 {
+  grid-area: d;
+  justify-self: center;
 }
-.four {
-  grid-area: four;
-}
-.five {
-  background-color: orange;
-  grid-row: 2 / 4;
-  grid-column: 2 / 4;
+.wrapper div {
+  background-color: peachpuff;
+  border: 1px solid red;
 }
