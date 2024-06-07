@@ -1,35 +1,25 @@
-.wrapper {
+.grid-container {
+  resize: both;
+  overflow: auto;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
-  grid-auto-rows: 100px;
-  grid-template-areas:
-    "a a a a b b b b"
-    "a a a a b b b b"
-    "c c c c d d d d"
-    "c c c c d d d d";
-    /* background-color: aqua; */
-    border: 1px solid;
-    /* align-items:last baseline; */
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid grey;
+  background-color: skyblue;
+  grid-template-rows: 150px 150px;
+  grid-template-columns: 150px 150px 150px 150px 150px;
 }
-.item1 {
-  grid-area: a;
+.grid-item {
+  background-color: #444;
+  text-align: center;
+  color: #ddd;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  padding: 12px;
 }
-.item2 {
-  grid-area: b;
-  justify-self: start;
+p {
+  margin: 12px auto 24px;
 }
-
-.item3 {
-  grid-area: c;
-  justify-self: end;
-}
-
-.item4 {
-  grid-area: d;
-  justify-self: center;
-}
-.wrapper div {
-  background-color: peachpuff;
-  border: 1px solid red;
+img {
+  height: 60px;
 }
