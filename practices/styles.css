@@ -1,9 +1,26 @@
 .layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  border: 1px solid red;
 }
 .child {
-  background-color:aqua;
-  min-height: 100px;
+  background-color: aqua;
+  border: 1px solid ;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 30px; */
+  padding: 30px;
+  text-align: center;
+}
+.child > div {
+  background-color: brown;
+  border: 1px solid yellow;
+  /* padding: 20px; */
+  height: 50px;
+  flex: 0 1 30%;
+  color: white;
+}
+.last-row {
+  grid-column: 1 / 3;
 }
