@@ -1,16 +1,9 @@
-.grid-container {
+.layout {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
 }
-.grid-container--fill {
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 2px;
-  /* padding: 0px; */
-}
-.grid-container--fit {
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 2px;
-}
-.grid-element {
-  background-color: aqua;
-  border: 1px solid red;
+.child {
+  background-color:aqua;
+  min-height: 100px;
 }
