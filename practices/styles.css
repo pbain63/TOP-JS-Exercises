@@ -2,16 +2,34 @@
   box-sizing: border-box;
 }
 .layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
+  display: flex;
+  justify-content: space-around;
 }
 .child {
   border: 5px solid black;
-  min-height: 100px;
+  width: 200px;
+  height: 200px;
   background-color: orange;
- 
-  text-align: center;
-  line-height: 100px;
- 
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+.child span {
+  background-color: darkred;
+}
+.child span:nth-child(1) {
+  grid-row: 2/3;
+  grid-column: 5/6;
+}
+.child span:nth-child(2) {
+  grid-row: 5/7;
+  grid-column: 1/3;
+}
+.child span:nth-child(3) {
+  grid-row: 6/7;
+  grid-column: 6/7;
+}
+.child span:nth-child(4) {
+  grid-row: 8/9;
+  grid-column: 2/6;
 }
