@@ -1,8 +1,11 @@
 .flipper {
-  display: flex;
-  border: 1px sold yellow;
-  justify-content: space-between;
-  /* gap: 10px; */
+  display: grid;
+  border: 1px solid black;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  /* grid-template-columns: repeat(3, 1fr); */
+  text-align: center;
+  /* justify-content: space-between; */
+  gap: 10px;
  
 }
 .item {
