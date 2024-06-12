@@ -1,16 +1,17 @@
-.controls {
-  margin: 200px 0;
-
-  display: grid;
-  grid-template-columns: auto auto auto 1fr auto auto;
-  /* justify-content: space-between; */
-  align-items: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-.scrubber {
-  background-color: #bada55;
-  height: 10px;
-  min-width: 100px;
-  border-radius: 10px;
 
-  /* flex: 1; */
+.hero {
+  height: 100vh;
+  display: flex;
+  background-color: rgba(25, 255, 255, 0.2);
+  flex-direction: column;
+  /* text-align: center; */
+  
+  /* align-content: center; */
+  /* align-self: center; */
+  align-items: center;
+  justify-content: center;
 }
