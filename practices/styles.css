@@ -5,13 +5,20 @@
 
 .hero {
   height: 100vh;
-  display: flex;
+  /* height: 200px; */
+  display:grid;
+  grid-template-columns: 1fr;
+  /* justify-content: center; */
+  align-content: center;
+  justify-items: center;
+  /* justify-self: center; */
+/* grid-template-rows: 1fr; */
   background-color: rgba(25, 255, 255, 0.2);
-  flex-direction: column;
+  
   /* text-align: center; */
   
   /* align-content: center; */
   /* align-self: center; */
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
