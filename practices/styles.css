@@ -2,18 +2,19 @@
   margin: 0;
   padding: 0;
 }
-.unknown {
- 
+.flex-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
-  /* grid-template-columns: repeat(7, 1fr); */
-  border: 1px solid;
-  gap: 20px;
- 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+
+.flex-container > * {
+  margin: 10px;
+  /* flex: 1; */
 }
 .item {
   background-color: aquamarine;
   border: 1px solid red;
   padding: 20px;
- 
 }
