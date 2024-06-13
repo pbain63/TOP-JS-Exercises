@@ -2,18 +2,16 @@
   margin: 0;
   padding: 0;
 }
-.flex-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-}
 
-.flex-container > * {
-  margin: 10px;
-  /* flex: 1; */
+.wrapper {
+  width: 500px;
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
+  flex-wrap: wrap;
+  gap: 5px;
 }
-.item {
+.wrapper > div {
+  flex: 1 1 150px;
   background-color: aquamarine;
   border: 1px solid red;
   padding: 20px;
