@@ -16,7 +16,7 @@
 }
 
 .wrapper > div {
-  flex: 1 1 150px;
+  /* flex: 1 1 150px; */
   background-color: aquamarine;
   border: 1px solid red;
   padding: 20px;
