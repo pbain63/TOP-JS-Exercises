@@ -4,14 +4,20 @@
 }
 
 .wrapper {
-  width: 500px;
+  /* width: 500px; */
   display: flex;
+  align-items: self-end;
+  min-height: 200px;
   /* flex-wrap: wrap; */
 }
-
-
+.box1 {
+  align-self: stretch;
+}
+.box2 {
+  align-self: self-start;
+}
 .wrapper > div {
-  flex: 1 1 150px;
+  /* flex: 1 1 150px; */
   background-color: aquamarine;
   border: 1px solid red;
   padding: 20px;
