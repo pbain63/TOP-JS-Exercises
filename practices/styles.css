@@ -9,6 +9,7 @@
   align-items: self-end;
   min-height: 200px;
   /* flex-wrap: wrap; */
+  border: 1px solid;
 }
 .box1 {
   align-self: stretch;
