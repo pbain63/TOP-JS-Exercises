@@ -4,21 +4,12 @@
 }
 
 .wrapper {
-  /* width: 500px; */
-  display: flex;
-  align-items: self-end;
-  min-height: 200px;
-  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
   border: 1px solid;
 }
-.box1 {
-  align-self: stretch;
-}
-.box2 {
-  align-self: self-start;
-}
+
 .wrapper > div {
-  /* flex: 1 1 150px; */
   background-color: aquamarine;
   border: 1px solid red;
   padding: 20px;
