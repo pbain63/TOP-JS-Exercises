@@ -1,5 +1,5 @@
-const myHeading = document.createElement("h1");
-myHeading.textContent = "Hello World!";
-
-
-document.body.appendChild(myHeading);
+function multiply(num1, num2) {
+  let result = num1 * num2;
+  return result;
+}
+multiply(5, 7);
