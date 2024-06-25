@@ -1,5 +1,4 @@
-function multiply(num1, num2) {
-  let result = num1 * num2;
-  return result;
-}
-multiply(5, 7);
+document.querySelector("html").addEventListener("click", function (event) {
+  alert("Ouch! Stop poking me!");
+  event.target.style.backgroundColor = "red";
+});
