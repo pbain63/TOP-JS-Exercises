@@ -1,7 +1,13 @@
-myObj = {
-  myString: "Hello World!",
-  myFunc: function () {
-    return this.myString;
-  },
+const myObject = {
+  property: "Value!",
+  otherProperty: 77,
+  "obnoxious property": function () {},
 };
-console.log(myObj.myFunc());
+
+const variable = "property";
+
+console.log(myObject.property);
+console.log(myObject["obnoxious property"]);
+
+// console.log(myObject.variable);
+console.log(myObject[variable]);
