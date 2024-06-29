@@ -1,14 +1,22 @@
-function Player(name, marker) {
-  this.name = name;
-  this.marker = marker;
-  this.sayName = function () {
-    console.log(this.name);
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
+  this.info = function () {
+    // return this.title, this.author, this.pages, this.read;
+    return (
+      this.title +
+      " by " +
+      this.author +
+      ", " +
+      this.pages +
+      " pages," +
+      this.read
+    );
   };
 }
-const player1 = new Player("prodip", "X");
-const player2 = new Player("Rock", "O");
-player1.sayName();
-player2.sayName();
-console.log(player1.marker);
-console.log(player1.name);
-// console.log(sumOfTripledEvens(1, 2, 3, 4, 5, 6, 7, 8));
+const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, "not read yet");
+console.log(theHobbit.info());
+
+// console.log(player1.name);
