@@ -1,22 +1,20 @@
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.info = function () {
-    // return this.title, this.author, this.pages, this.read;
-    return (
-      this.title +
-      " by " +
-      this.author +
-      ", " +
-      this.pages +
-      " pages," +
-      this.read
-    );
+function Player(name, marker) {
+  this.name = name;
+  this.marker = marker;
+  this.sayName = function () {
+    console.log(this.name);
   };
 }
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, "not read yet");
-console.log(theHobbit.info());
 
+const player1 = new Player("steve", "X");
+const player2 = new Player("also steve", "O");
+// player1.sayName(); // logs 'steve'
+// player2.sayName(); // logs 'also steve'
+
+Player.prototype.sayHello = function () {
+  console.log("Hello, I'm a player!");
+};
+
+player1.sayHello();
+player2.sayHello();
 // console.log(player1.name);
