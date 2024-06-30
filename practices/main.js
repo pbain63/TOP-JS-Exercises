@@ -1,20 +1,9 @@
-function Player(name, marker) {
-  this.name = name;
-  this.marker = marker;
-  this.sayName = function () {
-    console.log(this.name);
-  };
-}
+const object1 = {};
+object1.property1 = 42;
 
-const player1 = new Player("steve", "X");
-const player2 = new Player("also steve", "O");
-// player1.sayName(); // logs 'steve'
-// player2.sayName(); // logs 'also steve'
+console.log(object1.hasOwnProperty("property1"));
+console.log(object1.hasOwnProperty("toString"));
+console.log(object1.hasOwnProperty("hasOwnProperty"));
 
-Player.prototype.sayHello = function () {
-  console.log("Hello, I'm a player!");
-};
 
-player1.sayHello();
-player2.sayHello();
 // console.log(player1.name);
