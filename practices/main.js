@@ -1,9 +1,5 @@
-const object1 = {};
-object1.property1 = 42;
+const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
 
-console.log(object1.hasOwnProperty("property1"));
-console.log(object1.hasOwnProperty("toString"));
-console.log(object1.hasOwnProperty("hasOwnProperty"));
-
+console.log(fruits.hasOwnProperty(4));
 
 // console.log(player1.name);
