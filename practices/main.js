@@ -1,13 +1,6 @@
-const buz = {
-  fog: "stack",
-};
-
-for (const name in buz) {
-  if (buz.hasOwnProperty(name)) {
-    console.log(`this is fog (${name}) for sure. Value: ${buz[name]}`);
-  } else {
-    console.log(name);
-  }
-}
+const foo = { bar: "Here be dragons" };
+console.log(Object.hasOwn(foo, "bar"));
+console.log(Object.prototype.hasOwnProperty.call(foo, "bar"));
+console.log(({}).hasOwnProperty.call(foo, "bar"));
 
 // console.log(player1.name);
