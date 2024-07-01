@@ -1,23 +1,12 @@
-let hamster = {
-  stomach: [],
+function show() {
+  "use strict";
+  console.log(this === undefined);
 
-  eat(food) {
-    this.stomach.push(food);
-  },
-};
-let speedy = {
-  __proto__: hamster,
-  stomach: [],
-};
-let lazy = {
-  __proto__: hamster,
-  stomach: [],
-};
+  function display() {
+    console.log(this === undefined);
+  }
+  display();
+}
 
-// This one found the food
-speedy.eat("apple");
-console.log(speedy.stomach); // apple
-
-// This one also has it, why? fix please.
-console.log(lazy.stomach); // apple
+show();
 // console.log(player1.name);
