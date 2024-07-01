@@ -1,18 +1,24 @@
-let animal = {
-  eats: true,
-  walk() {
-    console.log("Animal walk");
+let user = {
+  name: "John",
+  surname: "Smith",
+
+  set fullName(value) {
+    [this.name, this.surname] = value.split(" ");
+  },
+  get fullName() {
+    return `${this.name} ${this.surname}`;
   },
 };
-let rabbit = {
-  jumps: true,
-  __proto__: animal,
+let admin = {
+  __proto__: user,
+  isAdmin: true,
 };
-let longEar = {
-  earLength: 10,
-  __proto__: rabbit,
-};
-longEar.walk();
-console.log(longEar.eats);
-console.log(rabbit.jumps);
+
+console.log(admin.fullName); // John Smith (*)
+
+// setter triggers!
+admin.fullName = "Alice Cooper"; // (**)
+
+console.log(admin.fullName); // Alice Cooper, state of admin modified
+console.log(user.fullName); // John Smith, state of user protected
 // console.log(player1.name);
