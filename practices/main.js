@@ -1,24 +1,23 @@
-let head = {
-  glasses: 1,
+let hamster = {
+  stomach: [],
+
+  eat(food) {
+    this.stomach.push(food);
+  },
+};
+let speedy = {
+  __proto__: hamster,
+  stomach: [],
+};
+let lazy = {
+  __proto__: hamster,
+  stomach: [],
 };
 
-let table = {
-  pen: 3,
-  __proto__: head,
-};
+// This one found the food
+speedy.eat("apple");
+console.log(speedy.stomach); // apple
 
-let bed = {
-  sheet: 1,
-  pillow: 2,
-  __proto__: table,
-};
-let pockets = {
-  money: 2000,
-  __proto__: bed,
-};
-
-console.log(pockets.pen);
-console.log(bed.glasses);
-// console.log(pockets.glasses);
-console.log(head.glasses);
+// This one also has it, why? fix please.
+console.log(lazy.stomach); // apple
 // console.log(player1.name);
