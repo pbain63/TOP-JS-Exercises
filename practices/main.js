@@ -1,12 +1,13 @@
-function show() {
-  "use strict";
-  console.log(this === undefined);
+let car = {
+  brand: "Honda",
+  getBrand: function () {
+    return this.brand;
+  },
+};
+let bike = {
+  brand: "Harley Davidson",
+};
+let brand = car.getBrand.bind(bike);
+console.log(brand());
 
-  function display() {
-    console.log(this === undefined);
-  }
-  display();
-}
-
-show();
 // console.log(player1.name);
