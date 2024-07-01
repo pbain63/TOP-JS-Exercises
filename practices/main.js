@@ -1,17 +1,24 @@
-let animal = {
-  eats: true,
-};
-let rabbit = {
-  jumps: true,
-  __proto__: animal,
+let head = {
+  glasses: 1,
 };
 
-for (const prop in rabbit) {
-  let isOwn = rabbit.hasOwnProperty(prop);
-  if (isOwn) {
-    console.log(`Our: ${prop}`);
-  } else {
-    console.log(`Inherited: ${prop}`);
-  }
-}
+let table = {
+  pen: 3,
+  __proto__: head,
+};
+
+let bed = {
+  sheet: 1,
+  pillow: 2,
+  __proto__: table,
+};
+let pockets = {
+  money: 2000,
+  __proto__: bed,
+};
+
+console.log(pockets.pen);
+console.log(bed.glasses);
+// console.log(pockets.glasses);
+console.log(head.glasses);
 // console.log(player1.name);
