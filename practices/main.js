@@ -1,24 +1,17 @@
-let user = {
-  name: "John",
-  surname: "Smith",
-
-  set fullName(value) {
-    [this.name, this.surname] = value.split(" ");
-  },
-  get fullName() {
-    return `${this.name} ${this.surname}`;
-  },
+let animal = {
+  eats: true,
 };
-let admin = {
-  __proto__: user,
-  isAdmin: true,
+let rabbit = {
+  jumps: true,
+  __proto__: animal,
 };
 
-console.log(admin.fullName); // John Smith (*)
-
-// setter triggers!
-admin.fullName = "Alice Cooper"; // (**)
-
-console.log(admin.fullName); // Alice Cooper, state of admin modified
-console.log(user.fullName); // John Smith, state of user protected
+for (const prop in rabbit) {
+  let isOwn = rabbit.hasOwnProperty(prop);
+  if (isOwn) {
+    console.log(`Our: ${prop}`);
+  } else {
+    console.log(`Inherited: ${prop}`);
+  }
+}
 // console.log(player1.name);
