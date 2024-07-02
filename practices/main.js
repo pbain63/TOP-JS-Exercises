@@ -1,14 +1,13 @@
-function Car(brand) {
-  this.brand = brand;
+function getBrand(prefix) {
+  console.log(prefix + this.brand);
 }
-
-Car.prototype.getBrand = function () {
-  return this.brand;
+let honda = {
+  brand: "Honda",
 };
-let car = new Car("Honda");
-console.log(car.getBrand());
+let audi = {
+  brand: "Audi",
+};
 
-var bmw = Car('BMW');
-console.log(bmw.brand);
-// => TypeError: Cannot read property 'brand' of undefined
+getBrand.call(honda, "It's a ");
+getBrand.call(audi, "It's an ");
 // console.log(player1.name);
