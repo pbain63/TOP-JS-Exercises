@@ -1,13 +1,11 @@
-function getBrand(prefix) {
-  console.log(prefix + this.brand);
+function Car() {
+  this.speed = 120;
 }
-let honda = {
-  brand: "Honda",
+Car.prototype.getSpeed = () => {
+  // Car.prototype.getSpeed = function(){
+  return this.speed;
 };
-let audi = {
-  brand: "Audi",
-};
+let car = new Car();
+console.log(car.getSpeed());
 
-getBrand.call(honda, "It's a ");
-getBrand.call(audi, "It's an ");
 // console.log(player1.name);
