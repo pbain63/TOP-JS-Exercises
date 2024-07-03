@@ -1,11 +1,8 @@
-function Car() {
-  this.speed = 120;
-}
-Car.prototype.getSpeed = () => {
-  // Car.prototype.getSpeed = function(){
-  return this.speed;
-};
-let car = new Car();
-console.log(car.getSpeed());
+const message = (function (name) {
+  // return "Hello " + name + "!";
+  return `Hello ${name}!`;
+})("Prodip");
+// const message = hello("Prodip");
 
+console.log(message);
 // console.log(player1.name);
