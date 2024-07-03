@@ -1,15 +1,16 @@
-function nonStrictSum(a, b) {
-  console.log(this === window);
-  return a + b;
-}
+const numbers = {
+  numberA: 5,
+  numberB: 10,
+  sum: function () {
+    console.log(this === numbers);
 
-function strictSum(a, b) {
-  "use strict";
-  console.log(this === undefined);
-  return a + b;
-}
+    const calculate = () => {
+      console.log(this === numbers);
+      return this.numberA + this.numberB;
+    };
+    return calculate();
+  },
+};
+console.log(numbers.sum());
 
-console.log(nonStrictSum(5, 6));
-
-console.log(strictSum(8, 12));
 // console.log(player1.name);
