@@ -1,8 +1,12 @@
-const message = (function (name) {
-  // return "Hello " + name + "!";
-  return `Hello ${name}!`;
-})("Prodip");
-// const message = hello("Prodip");
+function execute() {
+  "use strict";
 
-console.log(message);
+  function concat(str1, str2) {
+    console.log(this === undefined);
+    return str1 + str2;
+  }
+  concat("Hello", "World!")
+}
+execute();
+
 // console.log(player1.name);
