@@ -1,15 +1,11 @@
-const calc = {
-  num: 0,
-  increment() {
-    console.log(this === calc);
-    this.num += 1;
-    return this.num;
+const myDog = Object.create({
+  sayName() {
+    console.log(this === myDog);
+    return this.name;
   },
-};
+});
 
-
-console.log(calc.increment());
-console.log(calc.increment());
-
+myDog.name = "Milo";
+console.log(myDog.sayName());
 
 // console.log(player1.name);
