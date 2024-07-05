@@ -1,16 +1,8 @@
-const numbers = {
-  numberA: 5,
-  numberB: 10,
-  sum: function () {
-    console.log(this === numbers);
-
-    const calculate = () => {
-      console.log(this === numbers);
-      return this.numberA + this.numberB;
-    };
-    return calculate();
+const myObject = {
+  helloMethod: function () {
+    return "Hello Prodip!";
   },
 };
-console.log(numbers.sum());
-
+const message = myObject.helloMethod();
+console.log(message);
 // console.log(player1.name);
