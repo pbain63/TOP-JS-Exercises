@@ -1,16 +1,15 @@
-const words = ["Hello", "World"];
-words.join(",");
-
-const obj = {
-  myMethod() {
-    return new Date().toString();
+const calc = {
+  num: 0,
+  increment() {
+    console.log(this === calc);
+    this.num += 1;
+    return this.num;
   },
 };
-console.log(obj.myMethod());
 
-const func = obj.myMethod;
-console.log(func());
-console.log(parseFloat("16, 6"));
-console.log(isNaN(0));
+
+console.log(calc.increment());
+console.log(calc.increment());
+
 
 // console.log(player1.name);
