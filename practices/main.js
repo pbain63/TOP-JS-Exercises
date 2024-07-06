@@ -1,16 +1,15 @@
-class Planet {
-  constructor(name) {
-    this.name = name;
-  }
+function Pet(type, legs) {
+  this.type = type;
+  this.legs = legs;
 
-  getName() {
-    console.log(this === earth); // => true
-    return this.name;
+  this.logInfo = function() {
+    console.log(this === myCat); // => false
+    console.log(`The ${this.type} has ${this.legs} legs`);
   }
 }
 
-const earth = new Planet("Earth");
-// method invocation. the context is earth
-earth.getName(); // => 'Earth'
-
+const myCat = new Pet('Cat', 4);
+// logs "The undefined has undefined legs"
+// or throws a TypeError in strict mode
+setTimeout(myCat.logInfo, 1000);
 // console.log(player1.name);
