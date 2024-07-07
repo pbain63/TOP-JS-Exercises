@@ -1,16 +1,9 @@
-class Pet {
-  constructor(type, legs) {
-    this.type = type;
-    this.legs = legs;
+class Foo {
+  constructor() {
+    this.property = "Default Value";
   }
-  ligInfo = () => {
-    console.log(this === myCat);
-    console.log(`The ${this.type} has ${this.legs} legs`);
-  };
+  
 }
-const myCat = new Pet("Cat", 4);
-
-
-setTimeout(myCat.ligInfo, 1000);
-
+const fooInstance = new Foo();
+console.log(fooInstance.property);
 // console.log(player1.name);
