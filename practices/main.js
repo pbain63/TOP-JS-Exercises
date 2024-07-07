@@ -1,14 +1,15 @@
-function Pet(type, legs) {
-  this.type = type;
-  this.legs = legs;
-
-  this.ligInfo = () => {
+class Pet {
+  constructor(type, legs) {
+    this.type = type;
+    this.legs = legs;
+  }
+  ligInfo = () => {
     console.log(this === myCat);
     console.log(`The ${this.type} has ${this.legs} legs`);
   };
 }
 const myCat = new Pet("Cat", 4);
-// const boundLogInfo = myCat.ligInfo.bind(myCat);
+
 
 setTimeout(myCat.ligInfo, 1000);
 
