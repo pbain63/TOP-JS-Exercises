@@ -1,12 +1,7 @@
-function getThis() {
-  "use strict";
-  return this;
-}
-const one = getThis.bind(1);
+const hello = (name) => {
+  return "Hello " + name;
+};
+console.log(hello("World"));
 
-console.log(one());
-console.log(one.call(2));
-console.log(one.apply(2));
-console.log(one.bind(2)());
-console.log(new one());
+console.log([1, 2, 5, 6].filter((item) => item % 2 === 0));
 // console.log(player1.name);
