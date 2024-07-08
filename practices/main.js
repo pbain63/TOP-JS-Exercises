@@ -1,10 +1,15 @@
-const rabbit = { name: "White Rabbit" };
-
-function concatName(string) {
-  console.log(this === rabbit);
-  return string + this.name;
+function Runner(name) {
+  console.log(this instanceof Rabbit);
+  this.name = name;
 }
 
-console.log(concatName.call(rabbit, "Hello "));
-console.log(concatName.apply(rabbit, ["Bye "]));
+function Rabbit(name, countLegs) {
+  console.log(this instanceof Rabbit);
+
+  Runner.call(this, name);
+  this.countLegs = countLegs;
+}
+
+const myRabbit = new Rabbit("White Rabbit", 4);
+console.log(myRabbit);
 // console.log(player1.name);
