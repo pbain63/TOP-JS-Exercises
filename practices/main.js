@@ -1,7 +1,17 @@
-const hello = (name) => {
-  return "Hello " + name;
-};
-console.log(hello("World"));
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  log() {
+    console.log(this === myPoint);
+    setTimeout(() => {
+      console.log(this === myPoint);
+      console.log(this.x + ":" + this.y);
+    }, 1000);
+  }
+}
+const myPoint = new Point(95, 165);
+myPoint.log();
 
-console.log([1, 2, 5, 6].filter((item) => item % 2 === 0));
 // console.log(player1.name);
