@@ -1,17 +1,12 @@
-class Point {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
-  log() {
-    console.log(this === myPoint);
-    setTimeout(() => {
-      console.log(this === myPoint);
-      console.log(this.x + ":" + this.y);
-    }, 1000);
-  }
+function Period(hours, minutes) {
+  this.hours = hours;
+  this.minutes = minutes;
 }
-const myPoint = new Point(95, 165);
-myPoint.log();
 
+Period.prototype.format = function () {
+  console.log(this === walkPeriod);
+  return this.hours + " hours and" + this.minutes + " minutes";
+};
+const walkPeriod = new Period(5, 47);
+console.log(walkPeriod.format());
 // console.log(player1.name);
