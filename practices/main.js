@@ -1,15 +1,12 @@
-function Runner(name) {
-  console.log(this instanceof Rabbit);
-  this.name = name;
+function getThis() {
+  "use strict";
+  return this;
 }
+const one = getThis.bind(1);
 
-function Rabbit(name, countLegs) {
-  console.log(this instanceof Rabbit);
-
-  Runner.call(this, name);
-  this.countLegs = countLegs;
-}
-
-const myRabbit = new Rabbit("White Rabbit", 4);
-console.log(myRabbit);
+console.log(one());
+console.log(one.call(2));
+console.log(one.apply(2));
+console.log(one.bind(2)());
+console.log(new one());
 // console.log(player1.name);
