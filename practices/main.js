@@ -1,39 +1,38 @@
-const playerOneName = "tim";
-const playerTwoName = "jenn";
-const playerOneMarker = "X";
-const playerTwoMarker = "O";
+function Student(name, grade) {
+  this.name = name;
+  this.grade = grade;
+}
+Student.prototype.sayName = function () {
+  console.log(this.name);
+};
 
-const playerOne = {
-  name: "tim",
-  marker: "X",
-  score: 15,
-};
-const playerTwo = {
-  name: "jenn",
-  marker: "O",
-  score: 5,
-};
-function keepScore() {
-  if (playerOne.score >= 10) {
-    gameOver(playerOne);
-  } else if (playerTwo.score >= 10) {
-    gameOver(playerTwo);
-  }
+
+function EighthGrader(name) {
+  this.name = name;
+  this.grade = 8;
+}
+EighthGrader.prototype = Object.create(Student.prototype);
+
+function NinthGrader(name) {
+  this.name = name;
+  this.grade = 9;
 }
 
-keepScore();
+// Student.prototype.goToProm = function () {
+//   console.log("Eh.. go to prom?");
+// };
+NinthGrader.prototype = Object.create(Student.prototype);
 
-function gameOver(winningPlayer) {
-  console.log("Congratulations!");
-  console.log(winningPlayer.name + " is the winning player.");
-}
+NinthGrader.prototype.sayName = function () {
+  console.log("HAHAHHAHAHAHAHA");
+};
 
 
+const studentOne = new NinthGrader("steve");
+const studentTwo = new EighthGrader("jenn");
 
-// function printName(player) {
-//   console.log(player.name);
-// }
-// printName(playerTwo);
+studentOne.sayName();
+studentTwo.sayName();
 
 // console.dir(Object);
 // console.log(player1.name);
