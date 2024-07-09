@@ -1,12 +1,20 @@
-function Period(hours, minutes) {
-  this.hours = hours;
-  this.minutes = minutes;
-}
+const playerOneName = "tim";
+const playerTwoName = "jenn";
+const playerOneMarker = "X";
+const playerTwoMarker = "O";
 
-Period.prototype.format = function () {
-  console.log(this === walkPeriod);
-  return this.hours + " hours and" + this.minutes + " minutes";
+const playerOne = {
+  name: "tim",
+  marker: "X",
 };
-const walkPeriod = new Period(5, 47);
-console.log(walkPeriod.format());
+const playerTwo = {
+  name: "jenn",
+  marker: "O",
+};
+function printName(player) {
+  console.log(player.name);
+}
+printName(playerTwo);
+
+// console.dir(Object);
 // console.log(player1.name);
