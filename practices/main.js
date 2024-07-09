@@ -1,19 +1,10 @@
-const user = {
-  firstName: "Prodip",
-  lastname: "Bain",
-  hobbies: ["programming", "piano"],
-  listHobbies: function () {
+function User(name) {
+  this.name = name;
+  console.log(this);
+}
 
-    this.hobbies.forEach(function (hobby) {
-      // console.log(user.firstName);
-      console.log(this.firstName);
-      console.log(hobby);
-    }, this);
-  },
-};
-user.listHobbies();
-
-
+const prodip = new User("Prodip");
+const bain = new User("Bain");
 
 // console.dir(Object);
 // console.log(player1.name);
