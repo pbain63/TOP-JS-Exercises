@@ -8,12 +8,31 @@
   </head>
 
   <body>
-    <dialog>
-      <p>Hello, nice to meet you all!</p>
-      <button >Close</button>
-    </dialog>
+    <dialog id="favDialog">
+      <form>
+        <p>
+          <label>
+            Favourite Animal:
+            <select>
+              <option value="default">Choose</option>
+              <option>Dog</option>
+              <option>Cat</option>
+              <option>Bird</option>
+            </select>
+          </label>
+        </p>
 
-    <button>Show the dialog</button>
+        <div>
+          <button value="cancel" formmethod="dialog">Cancel</button>
+          <button id="confirmBtn" value="default">Confirm</button>
+        </div>
+      </form>
+    </dialog>
+    <p>
+      <button id="showDialog">Show the dialog</button>
+    </p>
+
+    <output></output>
 
     <script src="./main.js"></script>
   </body>
