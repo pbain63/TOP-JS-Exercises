@@ -1,14 +1,10 @@
-const dialog = document.getElementById("dialog");
-const showBtn = document.querySelector(".show");
+const checkbox = document.getElementById("id-checkbox");
 
-const closeBtn = dialog.querySelector(".close");
+checkbox.addEventListener("click", checkboxClick, false);
 
-showBtn.addEventListener("click", () => {
-  dialog.showModal();
-});
-
-closeBtn.addEventListener("click", () => {
-  dialog.close();
-});
-
+function checkboxClick(event) {
+  let warn = "preventDefault() won't let you check this! <br/>";
+  document.getElementById("output-box").innerHTML += warn;
+  event.preventDefault();
+}
 // console.log();
