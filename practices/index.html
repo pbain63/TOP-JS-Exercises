@@ -8,32 +8,26 @@
   </head>
 
   <body>
-    <dialog id="favDialog">
-      <form>
+    <dialog id="dialog">
+      <form method="dialog">
         <p>
           <label>
-            Favourite Animal:
-            <select>
-              <option value="default">Choose</option>
-              <option>Dog</option>
-              <option>Cat</option>
-              <option>Bird</option>
-            </select>
+            Favorite animal:
+            <input type="text" required />
           </label>
         </p>
 
         <div>
-          <button value="cancel" formmethod="dialog">Cancel</button>
-          <button id="confirmBtn" value="default">Confirm</button>
+          <input type="submit" id="normal-close" value="Normal close" />
+          <input type="submit" id="novalidate-close" value="Novalidate close" />
+          <input type="submit" id="js-close" value="JS close" />
         </div>
       </form>
     </dialog>
     <p>
-      <button id="showDialog">Show the dialog</button>
+      <button id="show-dialog">Show the dialog</button>
     </p>
-
     <output></output>
-
     <script src="./main.js"></script>
   </body>
 </html>
