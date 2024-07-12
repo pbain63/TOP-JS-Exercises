@@ -1,13 +1,13 @@
-const showBtn = document.getElementById("show-dialog");
 const dialog = document.getElementById("dialog");
-const jsCloseBtn = dialog.querySelector("#js-close");
+const showBtn = document.querySelector(".show");
+
+const closeBtn = dialog.querySelector(".close");
 
 showBtn.addEventListener("click", () => {
   dialog.showModal();
 });
 
-jsCloseBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+closeBtn.addEventListener("click", () => {
   dialog.close();
 });
 
