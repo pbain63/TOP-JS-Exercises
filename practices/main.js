@@ -1,34 +1,12 @@
-const myTextBox = document.getElementById("my-textbox");
-myTextBox.addEventListener("keydown", checkName, false);
-
-function checkName(evt) {
-  const key = evt.key;
-  const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
-  if (!lowerCaseAlphabet.includes(key)) {
-    evt.preventDefault();
-    displayWarning(
-      "Please use lowercase letters only.\n" + `key pressed: ${key}\n`
-    );
-  }
-  // console.log(key);
+function Player(name, marker) {
+  this.name = name;
+  this.marker = marker;
+  this.sayName = function () {
+    console.log(this.name);
+  };
 }
 
-let warningTimeout;
-const warningBox = document.createElement("div");
-warningBox.className = "warning";
+const player1 = new Player("Prodip", "X");
+const player2 = new Player("Also Prodip", "O");
 
-function displayWarning(msg) {
-  warningBox.innerHTML = msg;
-
-  if (document.body.contains(warningBox)) {
-    clearTimeout(warningTimeout);
-  } else {
-    myTextBox.parentNode.insertBefore(warningBox, myTextBox.nextSibling);
-  }
-
-  warningTimeout = setTimeout(() => {
-    warningBox.parentNode.removeChild(warningBox);
-    warningTimeout = -1;
-  }, 2000);
-}
-// console.log();
+player1.sayName();
