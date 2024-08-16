@@ -22,3 +22,6 @@ const player2 = new Player("also Prodip", "O");
 
 player1.sayName();
 player2.sayName();
+
+player1.getMarker();
+player2.getMarker();
