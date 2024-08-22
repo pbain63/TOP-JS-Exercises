@@ -11,3 +11,5 @@ var data = [
 data.map((x) => console.log(x.value));
 
 data.forEach((x) => console.log(x.value));
+
+console.log(data[0].value);
