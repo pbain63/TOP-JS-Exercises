@@ -1,0 +1,107 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body {
+	font-family: "Nunito Sans", "sans-serif";
+	background-color: #999;
+}
+
+#wrapper {
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 1rem .833%;
+	background-color: #fff;
+}
+
+img{
+	width:100%;
+	height:auto;
+	display: block;
+}
+
+h2 {
+	text-align: center;
+	margin: 0 1rem .5em;
+	font-weight: 900;
+	font-size: 3em;
+}
+
+#recipes {
+	padding: 0 7em 4em;
+}
+
+#recipes > div{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 6%;
+	align-items: center;
+}
+
+#recipes i {
+	font-size: 3em;
+	color: #e3e3e3;
+}
+
+#recipes > div > * {
+	grid-row: 1;
+}
+
+#recipes i:first-of-type, #recipes a:first-of-type {
+	grid-column: 1;
+	justify-self: start;
+}
+
+#recipes i:last-of-type, #recipes a:last-of-type {
+	grid-column: 3;
+	justify-self: end;
+}
+
+#recipes i{
+	position: relative;
+	cursor: pointer;
+} 
+
+#recipes i:hover{
+	color: #444;
+} 
+
+#recipes i:first-of-type{
+	right: 85px;
+} 
+
+#recipes i:last-of-type{
+	left: 85px;
+} 
+
+#recipes img {
+	max-width: 280px;
+}
+
+#recipes a {
+	position: relative;
+	
+}
+
+#recipes .recipe_txt {
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .6);
+	height: 80px;
+	width: 100%;
+	color: #fff;
+	font-size: .875em;
+	line-height: 1.2;
+	padding: 1em;
+	display: none;
+}
+
+#recipes a:hover div{
+	display: block;
+}
+
+#recipes .recipe_txt p {
+	font-weight: 300;
+}
