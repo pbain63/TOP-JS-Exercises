@@ -6,3 +6,6 @@ function makeAdding(firstNUmber) {
     return first + second;
   }
 }
+
+const add5 = makeAdding(5);
+console.log(add5(2));
