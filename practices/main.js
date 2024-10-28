@@ -1,6 +1,13 @@
-if (Math.random() > 0.5) {
-  const x = 1;
-} else {
-  const x = 2;
+function makeSizer(size) {
+  return function () {
+    document.body.style.fontSize = `${size}px`;
+  };
 }
-console.log(x);
+
+const size12 = makeSizer(12);
+const size14 = makeSizer(14);
+const size16 = makeSizer(36);
+
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
