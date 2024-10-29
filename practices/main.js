@@ -1,9 +1,12 @@
-const User = function (name) {
-  this.name = name;
-  this.discordName = "@" + name;
-};
+const personName = "Prodip";
+const age = 28;
+const color = "blue";
 
-function createUser(name) {
-  const discordName = "@" + name;
-  return { name, discordName };
-}
+console.log({ personName, age, color });
+
+// const thatObject = {personName: personName, age: age, color: color};
+
+// console.log(thatObject);
+
+// const nowFancyObject = { personName, age, color };
+// console.log(nowFancyObject);
