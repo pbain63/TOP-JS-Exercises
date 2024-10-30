@@ -1,9 +1,7 @@
-const obj = { a: 1, b: 2 };
-const { a, b } = obj;
+let a, b, rest;
+[a, b] = [10, 20];
+console.log(a, b);
 
-console.log(b);
+[a, b, ...rest] = [1, 2, 30, 40, 50];
+console.log(rest);
 
-const array = [1, 2, 3, 4, 5];
-const [zerothEle, firstEle] = array;
-
-console.log(array);
