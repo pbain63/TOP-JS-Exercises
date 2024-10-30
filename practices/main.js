@@ -1,12 +1,9 @@
-const personName = "Prodip";
-const age = 28;
-const color = "blue";
+const obj = { a: 1, b: 2 };
+const { a, b } = obj;
 
-console.log({ personName, age, color });
+console.log(b);
 
-// const thatObject = {personName: personName, age: age, color: color};
+const array = [1, 2, 3, 4, 5];
+const [zerothEle, firstEle] = array;
 
-// console.log(thatObject);
-
-// const nowFancyObject = { personName, age, color };
-// console.log(nowFancyObject);
+console.log(array);
