@@ -1,7 +1,4 @@
-let a, b, rest;
-[a, b] = [10, 20];
-console.log(a, b);
-
-[a, b, ...rest] = [1, 2, 30, 40, 50];
-console.log(rest);
-
+const x = [1,2,3,4,5];
+const [y,z] = x;
+console.log(y);
+console.log(z);
