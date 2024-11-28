@@ -1,11 +1,2 @@
-function f() {
-    return [1, 2, 3];
-  }
-  
-  const [a, , b] = f();
-  console.log(a); // 1
-  console.log(b); // 3
-  
-  const [c] = f();
-  console.log(c); // 1
-  
+const [a, b, ...[c, d, ...[e, f]]] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c, d, e, f); 
