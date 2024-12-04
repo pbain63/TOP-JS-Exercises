@@ -1,10 +1,5 @@
-const user = {
-    id: 42,
-    isVerified: true,
-  };
-  
-  const { id, isVerified } = user;
-  
-  console.log(id); // 42
-  console.log(isVerified); // true
-  
+const o = { p: 42, q: true };
+const { p: foo, q: bar } = o;
+
+console.log(foo); // 42
+console.log(bar); // true
