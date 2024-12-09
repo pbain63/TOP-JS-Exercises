@@ -1,5 +1,5 @@
-function userDisplayName({ displayName: dname }) {
-  return dname;
+function whois({ displayName, fullName: { firstName: name } }) {
+  return `${displayName} is ${name}`;
 }
 
-console.log(userDisplayName(user)); // "jdoe"
+console.log(whois(user)); 
