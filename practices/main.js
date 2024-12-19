@@ -1,4 +1,9 @@
-const foo = { "fizz-buzz": true };
-const { "fizz-buzz": fizzBuzz } = foo;
+const props = [
+  { id: 1, name: "Fizz" },
+  { id: 2, name: "Buzz" },
+  { id: 3, name: "FizzBuzz" },
+];
 
-console.log(fizzBuzz); // true
+const [, , { name }] = props;
+
+console.log(name); // "FizzBuzz"
