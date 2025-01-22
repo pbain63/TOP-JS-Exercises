@@ -1,10 +1,10 @@
-function init() {
-  let name = "PRODIP";
-
-  function displayName() {
-    console.log(name);
-  }
-  displayName();
+function makeAdder(x) {
+  return function (y) {
+    return x + y;
+  };
 }
+const add5 = makeAdder(5);
+const add10 = makeAdder(10);
 
-init();
+console.log(add5(2));
+console.log(add10(2));
