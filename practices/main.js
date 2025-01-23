@@ -1,6 +1,6 @@
 function f() {
-  return [1, 2];
+  return [1, 2, 3];
 }
-const [a, b] = f();
-
-console.log(b);
+const [a, , b] = f();
+const [c] = f();
+console.log(c);
