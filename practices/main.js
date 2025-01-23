@@ -4,8 +4,7 @@
 // console.log(array[firstEle]);
 // console.log(firstEle);
 
-let a = 1;
-let b = 3;
-[a, b] = [b, a];
+let arr = [1, 20, 30];
+[arr[2], arr[1]] = [arr[1], arr[2]];
 
-console.log(a);
+console.log(arr);
