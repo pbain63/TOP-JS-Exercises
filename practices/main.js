@@ -4,7 +4,8 @@
 // console.log(array[firstEle]);
 // console.log(firstEle);
 
-const numbers = [];
-const obj = { a: 1, b: 2 };
-({ a: numbers[0], b: numbers[1] } = obj);
-console.log(numbers[1]);
+let a = 1;
+let b = 3;
+[a, b] = [b, a];
+
+console.log(a);
