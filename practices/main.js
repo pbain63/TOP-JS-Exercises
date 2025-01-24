@@ -1,12 +1,9 @@
-const obj = {
-  *[Symbol.iterator]() {
-    for (const v of [0, 1, 2, 3]) {
-      console.log(v);
-      yield v;
-    }
-  },
+const user = {
+  id: 42,
+  isVerified:true,
 };
-const [a, b, ...rest] = obj;
-console.log(rest);
+const {id, isVerified} = user;
+console.log(user.id);
 
-// console.log(obj);
+
+console.log(isVerified);
