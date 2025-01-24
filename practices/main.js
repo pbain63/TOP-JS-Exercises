@@ -1,9 +1,4 @@
-const user = {
-  id: 42,
-  isVerified:true,
-};
-const {id, isVerified} = user;
-console.log(user.id);
+const {a: aa = 10, b:bb = 5} = {a:3};
+console.log(aa);
 
-
-console.log(isVerified);
+console.log(bb);
