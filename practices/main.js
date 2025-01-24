@@ -1,20 +1,26 @@
-const metadata = {
-  title: "Scratchpad",
-  translations: [
-    {
-      locale: "de",
-      localizationTags: [],
-      lastEdit: "2014-04-14T08:43:37",
-      url: "/de/docs/Tools/Scratchpad",
-      title: "JavaScript-Umgebung",
+const people = [
+  {
+    name: "Mike Smith",
+    family: {
+      mother: "Jane Smith",
+      father: "Harry Smith",
+      sister: "Samantha Smith",
     },
-  ],
-  url: "/en-US/docs/Tools/Scratchpad",
-};
-const {
-  title: englishTitle,
-  translations: [{ title: localeTitle }],
-} = metadata;
-
-console.log(englishTitle);
-console.log(localeTitle);
+    age: 35,
+  },
+  {
+    name: "Tom Jones",
+    family: {
+      mother: "Norah Jones",
+      father: "RIchard Jones",
+      brother: "Howard Jones",
+    },
+    age: 25,
+  },
+];
+for (const {
+  name: n,
+  family: { father: f },
+} of people) {
+  console.log(`Name: ${n}, Father: ${f}`);
+}
