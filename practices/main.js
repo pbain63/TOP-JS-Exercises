@@ -1,22 +1,20 @@
-const user = {
-  id: 42,
-  displayName: "jdoe",
-  fullName: {
-    firstName: "Jane",
-    lastName: "Doe",
-  },
+const metadata = {
+  title: "Scratchpad",
+  translations: [
+    {
+      locale: "de",
+      localizationTags: [],
+      lastEdit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
+  ],
+  url: "/en-US/docs/Tools/Scratchpad",
 };
-function userId({ id }) {
-  return id;
-}
-console.log(userId(user));
+const {
+  title: englishTitle,
+  translations: [{ title: localeTitle }],
+} = metadata;
 
-function userDisplayName({ displayName: dname }) {
-  return dname;
-}
-console.log(userDisplayName(user));
-
-function whois({ displayName, fullName: { firstName: name } }) {
-  return `${displayName} is ${name}`;
-}
-console.log(whois(user));
+console.log(englishTitle);
+console.log(localeTitle);
