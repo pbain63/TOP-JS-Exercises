@@ -1,26 +1,17 @@
-const people = [
-  {
-    name: "Mike Smith",
-    family: {
-      mother: "Jane Smith",
-      father: "Harry Smith",
-      sister: "Samantha Smith",
-    },
-    age: 35,
-  },
-  {
-    name: "Tom Jones",
-    family: {
-      mother: "Norah Jones",
-      father: "RIchard Jones",
-      brother: "Howard Jones",
-    },
-    age: 25,
-  },
-];
-for (const {
-  name: n,
-  family: { father: f },
-} of people) {
-  console.log(`Name: ${n}, Father: ${f}`);
+function createUser(name) {
+  const discordName = "@" + name;
+
+  let reputation = 0;
+  const getReputation = () => reputation;
+  const giveReputation = () => reputation++;
+
+  return { name, discordName, getReputation, giveReputation };
 }
+const josh = createUser("josh");
+josh.giveReputation();
+josh.giveReputation();
+
+console.log({
+  discordName: josh.discordName,
+  reputation: josh.getReputation(),
+});
