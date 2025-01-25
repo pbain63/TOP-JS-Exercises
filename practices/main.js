@@ -1,9 +1,9 @@
 const dog = "snickers";
-function logDog() {
+function logDog(dog) {
   console.log(dog);
 }
 function go() {
   const dog = "sunny";
-  logDog();
+  logDog("Rufus");
 }
 go();
