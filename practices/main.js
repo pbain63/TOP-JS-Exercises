@@ -1,17 +1,11 @@
-function createUser(name) {
-  const discordName = "@" + name;
+const calculator = (function () {
+  const add = (a, b) => a + b;
+  const sub = (a, b) => a - b;
+  const mul = (a, b) => a * b;
+  const div = (a, b) => a / b;
+  return { add, sub, mul, div };
+})();
+console.log(calculator.add(3, 5));
+console.log(calculator.div(14, 5534));
 
-  let reputation = 0;
-  const getReputation = () => reputation;
-  const giveReputation = () => reputation++;
-
-  return { name, discordName, getReputation, giveReputation };
-}
-const josh = createUser("josh");
-josh.giveReputation();
-josh.giveReputation();
-
-console.log({
-  discordName: josh.discordName,
-  reputation: josh.getReputation(),
-});
+// calculator.sub(6, 2);
