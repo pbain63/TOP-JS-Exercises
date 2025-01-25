@@ -1,9 +1,8 @@
-const dog = "snickers";
-function logDog(dog) {
-  console.log(dog);
+function sayHi(name) {
+  function yell() {
+    console.log(name.toUpperCase());
+  }
+  yell();
 }
-function go() {
-  const dog = "sunny";
-  logDog("Rufus");
-}
-go();
+
+sayHi("Prodip");
