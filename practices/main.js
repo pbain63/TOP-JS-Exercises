@@ -1,12 +1,11 @@
-function createGreeting(greeting = "") {
-  const myGreet = greeting.toUpperCase();
+function createGame(gameName) {
+  let score = 0;
 
-  return function (name) {
-    return `${myGreet} ${name}`;
+  return function win() {
+    score++;
+    return `Your name ${gameName} score is ${score}`;
   };
 }
-const sayHello = createGreeting("hello");
-const sayHey = createGreeting("hey");
-console.log(sayHello("prodip"));
-console.log(sayHello("hedayet"));
-console.log(sayHey("Bill"));
+const hockeyGame = createGame("Hockey");
+// hockeyGame();
+console.log(hockeyGame());
