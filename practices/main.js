@@ -7,5 +7,8 @@ function createGame(gameName) {
   };
 }
 const hockeyGame = createGame("Hockey");
+const soccerGame = createGame("Soccer");
 // hockeyGame();
 console.log(hockeyGame());
+console.log(soccerGame());
+
