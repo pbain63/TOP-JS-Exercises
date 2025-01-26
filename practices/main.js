@@ -1,11 +1,12 @@
-function outer() {
-  const outerVar = "Hey I am the outer Var";
+function createGreeting(greeting = "") {
+  const myGreet = greeting.toUpperCase();
 
-  function inner() {
-    const innerVar = "hey I am the inner Var";
-    console.log(innerVar);
-    console.log(outerVar);
-  }
-  inner();
+  return function (name) {
+    return `${myGreet} ${name}`;
+  };
 }
-outer();
+const sayHello = createGreeting("hello");
+const sayHey = createGreeting("hey");
+console.log(sayHello("prodip"));
+console.log(sayHello("hedayet"));
+console.log(sayHey("Bill"));
