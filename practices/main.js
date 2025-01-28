@@ -1,14 +1,13 @@
-function createGame(gameName) {
-  let score = 0;
+const Formatter = (function () {
+  const log = (message) => console.log(`[${Date.now()}] Logger: ${message}`);
 
-  return function win() {
-    score++;
-    return `Your name ${gameName} score is ${score}`;
+  const makeUppercase = (text) => {
+    log("Making uppercase");
+    return text.toUpperCase();
   };
-}
-const hockeyGame = createGame("Hockey");
-const soccerGame = createGame("Soccer");
-// hockeyGame();
-console.log(hockeyGame());
-console.log(soccerGame());
 
+  return {
+    makeUppercase,
+  };
+})();
+console.log(Formatter.makeUppercase("tomek"));
