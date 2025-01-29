@@ -7,12 +7,12 @@ const Formatter = (function () {
   };
   const makeUppercase = (text) => {
     log("Making uppercase");
-    return text.toUpperCase();
-    setTimesRun();
+    setTimesRun(); 
     return text.toUpperCase();
   };
   return { makeUppercase, timesRun };
 })();
-console.log(Formatter.makeUppercase("prodip"));
-Formatter.timesRun = 10;
-console.log(Formatter.timesRun);
+
+console.log(Formatter.makeUppercase("prodip")); 
+console.log(Formatter.timesRun); 
+
