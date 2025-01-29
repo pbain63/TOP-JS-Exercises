@@ -1,20 +1,21 @@
 const Formatter = (function () {
   const log = (message) => console.log(`[${Date.now()}] Logger: ${message}`);
-  const timesRun = [];
 
   const makeUppercase = (text) => {
     log("Making uppercase");
-    timesRun.push(null);
     return text.toUpperCase();
+  };
+
+  const writeToDOM = (selector, message) => {
+    if (!!document && "querySelector" in document) {
+      document.querySelector(selector).innerHTML = message;
+    }
   };
 
   return {
     makeUppercase,
-    timesRun,
+    writeToDOM,
   };
 })();
-
 console.log(Formatter.makeUppercase("prodip"));
-console.log(Formatter.makeUppercase("prodip"));
-console.log(Formatter.makeUppercase("prodip"));
-console.log(Formatter.timesRun.length);
+Formatter.writeToDOM("#target", "Hi there");
