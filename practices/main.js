@@ -1,18 +1,20 @@
 const Formatter = (function () {
-  let timesRun = 0;
   const log = (message) => console.log(`[${Date.now()}] Logger: ${message}`);
-  const setTimesRun = () => {
-    console.log("Setting times run");
-    ++timesRun;
-  };
+  const timesRun = [];
+
   const makeUppercase = (text) => {
     log("Making uppercase");
-    setTimesRun(); 
+    timesRun.push(null);
     return text.toUpperCase();
   };
-  return { makeUppercase, timesRun };
+
+  return {
+    makeUppercase,
+    timesRun,
+  };
 })();
 
-console.log(Formatter.makeUppercase("prodip")); 
-console.log(Formatter.timesRun); 
-
+console.log(Formatter.makeUppercase("prodip"));
+console.log(Formatter.makeUppercase("prodip"));
+console.log(Formatter.makeUppercase("prodip"));
+console.log(Formatter.timesRun.length);
