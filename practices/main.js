@@ -1,20 +1,14 @@
-const documentMock = (() => ({
-  querySelector: (selector) => ({
-    innerHTML: null,
-  }),
-}))();
-
-const Formatter = (function (doc) {
-  const log = (message) => console.log(`[${Date.now()}] Logger: ${message}`);
-
-  const makeUppercase = (text) => {
-    log("Making uppercase");
-    return text.toUppercase();
-  };
-
-  const writeToDom = (selector, message) => {
-    doc.querySelector(selector).innerHTML = message;
-  };
-
-  return { makeUppercase, writeToDom };
-})(document || documentMock);
+// object literal
+let myModule = {
+  name: "prodip",
+  age: 34,
+  sayName: function () {
+    // alert(this.name);
+    console.log(this.name);
+  },
+  setName: function (newName) {
+    this.name = newName;
+  },
+};
+myModule.sayName();
+myModule.setName("Bro");
