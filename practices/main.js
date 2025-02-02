@@ -1,10 +1,11 @@
-function Greeter(name) {
-  this.name = name || "Prodip Bain";
-}
-Greeter.prototype.hello = function hello() {
-  return "Hello my name is " + this.name;
-};
+let score = (function () {
+  let points = 0;
+  return function () {
+    return (points += 1);
+  };
+})();
 
-const george = new Greeter("George");
-const msg = george.hello();
-console.log(msg);
+console.log(score());
+console.log(score());
+console.log(score());
+console.log(score());
