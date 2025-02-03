@@ -1,24 +1,29 @@
-// const FactoryFunction = (string) => {
-//   const capitalizeString = () => string.toUpperCase();
-//   const printString = () => console.log(`----${capitalizeString()}----`);
-//   return { printString };
-// };
-// const taco = FactoryFunction("taco");
-
-// // printString();
-// // capitalizeString();
-// // taco.capitalizeString();
-// taco.printString();
-
-const counterCreator = () => {
-  let count = 0;
-  return () => {
-    console.log(count);
-    count++;
+const Player = (name, level) => {
+  let health = level * 2;
+  const getLevel = () => level;
+  const getName = () => name;
+  const die = () => {
+    //death
   };
+  const damage = (x) => {
+    health -= x;
+    if (health <= 0) {
+      die();
+    }
+  };
+  const attack = (enemy) => {
+    if (level < enemy.getLevel()) {
+      damage(1);
+      console.log(`${enemy.getName()} has damaged ${name}`);
+    }
+    if (level >= enemy.getLevel()) {
+      enemy.damage(1);
+      console.log(`${name} has damaged ${enemy.getName()}`);
+    }
+  };
+  return { attack, damage, getLevel, getName };
 };
-const counter = counterCreator();
-counter();
-counter();
-counter();
-counter();
+
+const jimmie = Player("jim", 10);
+const badGuy = Player("dip", 5);
+jimmie.attack(badGuy);
