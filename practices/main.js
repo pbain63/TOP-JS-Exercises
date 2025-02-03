@@ -1,29 +1,15 @@
-const Player = (name, level) => {
-  let health = level * 2;
-  const getLevel = () => level;
-  const getName = () => name;
-  const die = () => {
-    //death
-  };
-  const damage = (x) => {
-    health -= x;
-    if (health <= 0) {
-      die();
-    }
-  };
-  const attack = (enemy) => {
-    if (level < enemy.getLevel()) {
-      damage(1);
-      console.log(`${enemy.getName()} has damaged ${name}`);
-    }
-    if (level >= enemy.getLevel()) {
-      enemy.damage(1);
-      console.log(`${name} has damaged ${enemy.getName()}`);
-    }
-  };
-  return { attack, damage, getLevel, getName };
+const Person = (name) => {
+  const sayName = () => console.log(`My name is ${name}`);
+
+  return { sayName };
 };
 
-const jimmie = Player("jim", 10);
-const badGuy = Player("dip", 5);
-jimmie.attack(badGuy);
+const Nerd = (name) => {
+  const prototype = Person(name);
+  const doSomthingNerdy = () => console.log("Nerd stuff");
+  return Object.assign({}, prototype, { doSomthingNerdy });
+};
+
+const jeff = Nerd("Prodip.");
+jeff.sayName();
+jeff.doSomthingNerdy();
