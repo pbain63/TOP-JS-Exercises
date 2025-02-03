@@ -1,13 +1,8 @@
 const proto = {
-  hello() {
-    return `Hello, my name is ${this.name}`;
+  hello: function hello() {
+    return `Hello my name is ${this.name}`;
   },
 };
-const greeter = (name) =>
-  Object.assign(Object.create(proto), {
-    name,
-  });
-const george = greeter("george");
-
+const george = Object.assign({}, proto, { name: "George" });
 const msg = george.hello();
 console.log(msg);
