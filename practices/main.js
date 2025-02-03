@@ -1,11 +1,11 @@
-let score = (function () {
-  let points = 0;
-  return function () {
-    return (points += 1);
-  };
-})();
+const FactoryFunction = (string) => {
+  const capitalizeString = () => string.toUpperCase();
+  const printString = () => console.log(`----${capitalizeString()}----`);
+  return { printString };
+};
+const taco = FactoryFunction("taco");
 
-console.log(score());
-console.log(score());
-console.log(score());
-console.log(score());
+// printString();
+// capitalizeString();
+// taco.capitalizeString();
+taco.printString();
