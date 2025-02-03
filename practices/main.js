@@ -1,15 +1,13 @@
-const Person = (name) => {
-  const sayName = () => console.log(`My name is ${name}`);
-
-  return { sayName };
+const proto = {
+  hello() {
+    return `Hello, my name is ${this.name}`;
+  },
 };
+const greeter = (name) =>
+  Object.assign(Object.create(proto), {
+    name,
+  });
+const george = greeter("george");
 
-const Nerd = (name) => {
-  const prototype = Person(name);
-  const doSomthingNerdy = () => console.log("Nerd stuff");
-  return Object.assign({}, prototype, { doSomthingNerdy });
-};
-
-const jeff = Nerd("Prodip.");
-jeff.sayName();
-jeff.doSomthingNerdy();
+const msg = george.hello();
+console.log(msg);
