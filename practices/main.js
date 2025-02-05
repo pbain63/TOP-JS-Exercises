@@ -1,26 +1,32 @@
 import Events from "eventemitter3";
 
-const modelMixin = Object.assign(
-  {
-    attrs: {},
-    set(name, value) {
-      this.attrs[name] = value;
+const rawMixin = function () {
+  const attrs = {};
 
-      this.emit("change", {
-        prop: name,
-        value: value,
-      });
-    },
+  return Object.assign(
+    this,
+    {
+      set(name, value) {
+        attrs[name] = value;
 
-    get(name) {
-      return this.attrs[name];
+        this.emit("change", {
+          prop: name,
+          value: value,
+        });
+      },
+
+      get(name) {
+        return attrs[name];
+      },
     },
-  },
-  Events.prototype
-);
+    Events.prototype
+  );
+};
+
+const mixinModel = (target) => rawMixin.call(target);
 
 const george = { name: "george" };
-const model = Object.assign(george, modelMixin);
+const model = mixinModel(george);
 
 model.on("change", (data) => console.log(data));
 
