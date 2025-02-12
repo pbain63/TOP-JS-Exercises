@@ -1,8 +1,8 @@
 /*
-** The Gameboard represents the state of the board
-** Each equare holds a Cell (defined later)
-** and we expose a dropToken method to be able to add Cells to squares
-*/
+ ** The Gameboard represents the state of the board
+ ** Each equare holds a Cell (defined later)
+ ** and we expose a dropToken method to be able to add Cells to squares
+ */
 
 function Gameboard() {
   const rows = 6;
@@ -14,8 +14,10 @@ function Gameboard() {
   // column 0 will represent the left-most column.
   // This nested-loop technique is a simple and common way to create a 2d array.
   for (let i = 0; i < rows; i++) {
+    // outer loop handles rows
     board[i] = [];
     for (let j = 0; j < columns; j++) {
+      // inner loop handles columns.
       board[i].push(Cell());
     }
   }
@@ -31,9 +33,11 @@ function Gameboard() {
     // so we need to loop through the rows, starting at row 0,
     // find all the rows that don't have a token, then take the
     // last one, which will represent the bottom-most empty cell
-    const availableCells = board.filter((row) => row[column].getValue() === 0).map(row => row[column]);
+    const availableCells = board
+      .filter((row) => row[column].getValue() === 0)
+      .map((row) => row[column]);
 
-    // If no cells make it through the filter, 
+    // If no cells make it through the filter,
     // the move is invalid. Stop execution.
     if (!availableCells.length) return;
 
@@ -46,7 +50,9 @@ function Gameboard() {
   // It is helpful to see what the board looks like after each turn as we play,
   // but we won't need it after we build our UI
   const printBoard = () => {
-    const boardWithCellValues = board.map((row) => row.map((cell) => cell.getValue()))
+    const boardWithCellValues = board.map((row) =>
+      row.map((cell) => cell.getValue())
+    );
     console.log(boardWithCellValues);
   };
 
@@ -56,11 +62,11 @@ function Gameboard() {
 }
 
 /*
-** A Cell represents one "square" on the board and can have one of
-** 0: no token is in the square,
-** 1: Player One's token,
-** 2: Player 2's token
-*/
+ ** A Cell represents one "square" on the board and can have one of
+ ** 0: no token is in the square,
+ ** 1: Player One's token,
+ ** 2: Player 2's token
+ */
 
 function Cell() {
   let value = 0;
@@ -75,15 +81,15 @@ function Cell() {
 
   return {
     addToken,
-    getValue
+    getValue,
   };
 }
 
-/* 
-** The GameController will be responsible for controlling the 
-** flow and state of the game's turns, as well as whether
-** anybody has won the game
-*/
+/*
+ ** The GameController will be responsible for controlling the
+ ** flow and state of the game's turns, as well as whether
+ ** anybody has won the game
+ */
 function GameController(
   playerOneName = "Player One",
   playerTwoName = "Player Two"
@@ -93,12 +99,12 @@ function GameController(
   const players = [
     {
       name: playerOneName,
-      token: 1
+      token: 1,
     },
     {
       name: playerTwoName,
-      token: 2
-    }
+      token: 2,
+    },
   ];
 
   let activePlayer = players[0];
@@ -118,7 +124,7 @@ function GameController(
     console.log(
       `Dropping ${getActivePlayer().name}'s token into column ${column}...`
     );
-    board.dropToken(column, getActivePlayer().token);
+    board.dropToken(column, getAactivePlayer().token);
 
     /*  This is where we would check for a winner and handle that logic,
         such as a win message. */
@@ -135,7 +141,7 @@ function GameController(
   // getActivePlayer for the UI version, so I'm revealing it now
   return {
     playRound,
-    getActivePlayer
+    getActivePlayer,
   };
 }
 
