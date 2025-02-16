@@ -124,7 +124,7 @@ function GameController(
     console.log(
       `Dropping ${getActivePlayer().name}'s token into column ${column}...`
     );
-    board.dropToken(column, getAactivePlayer().token);
+    board.dropToken(column, getActivePlayer().token);
 
     /*  This is where we would check for a winner and handle that logic,
         such as a win message. */
