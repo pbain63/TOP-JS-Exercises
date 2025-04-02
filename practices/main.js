@@ -10,14 +10,16 @@
 let user = {
   name: "John",
   surname: "Smith",
-
-  get fullName() {
+};
+Object.defineProperty(user, "fullName", {
+  get() {
     return `${this.name} ${this.surname}`;
   },
-  set fullName(value) {
+  set(value) {
     [this.name, this.surname] = value.split(" ");
   },
-};
-user.fullName = "Pro Dip";
-alert(user.name);
-alert(user.surname);
+});
+
+alert(user.fullName);
+
+for (let key in user) alert(key);
