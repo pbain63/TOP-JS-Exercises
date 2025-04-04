@@ -7,20 +7,14 @@
 //     }
 // };
 
-function User(name, birthday) {
-  this.name = name;
-  this.birthday = birthday;
+class User {
+  constructor(name) {
+    this.name = name;
+  }
 
-  Object.defineProperty(this, "age", {
-    get() {
-      let todayYear = new Date().getFullYear();
-      return todayYear - this.birthday.getFullYear();
-    },
-  });
+  sayHi() {
+    alert(this.name);
+  }
 }
-
-
-
-let john = new User("John", new Date(1992, 6, 1));
-alert(john.birthday);
-alert(john.age);
+let user = new User("Prodip");
+user.sayHi();
