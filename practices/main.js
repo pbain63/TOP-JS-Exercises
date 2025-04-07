@@ -7,19 +7,20 @@
 //     }
 // };
 
-let user = {
-  get name() {
-    return this._name;
-  },
-  set name(value) {
-    if (value.length < 4) {
-      alert("Name is too short, need at least 4 characters");
-      return;
-    }
-    this._name = value;
-  },
-};
+function User(name, birthday) {
+  this.name = name;
+  this.birthday = birthday;
 
-user.name = "Pete";
-alert(user.name);
-user.name = "pro";
+  Object.defineProperty(this, "age", {
+    get() {
+      let todayYear = new Date().getFullYear();
+      return todayYear - this.birthday.getFullYear();
+    },
+  });
+}
+
+
+
+let john = new User("John", new Date(1992, 6, 1));
+alert(john.birthday);
+alert(john.age);
