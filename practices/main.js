@@ -16,5 +16,8 @@ class User {
     alert(this.name);
   }
 }
-let user = new User("Prodip");
-user.sayHi();
+
+alert(typeof User);
+
+// let user = new User("Prodip");
+// user.sayHi();
