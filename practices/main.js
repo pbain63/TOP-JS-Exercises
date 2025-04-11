@@ -26,4 +26,4 @@ class User {
 let user = new User("Prodip");
 alert(user.name);
 
-// user = new User("");
+user = new User("");
