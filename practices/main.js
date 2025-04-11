@@ -7,11 +7,8 @@
 //     }
 // };
 
-function User(name) {
-  this.name = name;
+class User {
+  constructor() {}
 }
-User.prototype.sayHi = function () {
-  alert(this.name);
-};
-let user = new User("John");
-user.sayHi();
+alert(typeof User);
+User();
