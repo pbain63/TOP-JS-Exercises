@@ -7,13 +7,12 @@
 //     }
 // };
 
-let User = class MyClass {
-  sayHi() {
-    alert(MyClass); //dhdjojfdsjf
-  }
-};
-
+function makeClass(phrase) {
+  return class {
+    sayHi() {
+      alert(phrase);
+    }
+  };
+}
+let User = makeClass("Prodip");
 new User().sayHi();
-
-alert(MyClass);
-
