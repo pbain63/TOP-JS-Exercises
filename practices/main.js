@@ -7,8 +7,13 @@
 //     }
 // };
 
-class User {
-  constructor() {}
-}
-alert(typeof User);
-User();
+let User = class MyClass {
+  sayHi() {
+    alert(MyClass); //dhdjojfdsjf
+  }
+};
+
+new User().sayHi();
+
+alert(MyClass);
+
