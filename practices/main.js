@@ -1,6 +1,8 @@
 class User {
-  ["say" + "Hi"]() {
-    alert("Prodip");
+  name = "prodip";
+
+  sayHi() {
+    alert(`Hello, ${this.name}!`);
   }
 }
 new User().sayHi();
