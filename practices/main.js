@@ -1,13 +1,19 @@
-class Button {
-  constructor(value) {
-    this.value = value;
+class MyClass {
+  prop = value;
+
+  constructor(...){
+
   }
 
-  click = () => {
-    alert(this.value);
-  };
+  method(...) {
+    
+  }
+  get something (...) {
+
+  }
+  set something (...) {
+
+  }
+
+  [Symbol.iterator]() {}
 }
-
-let button = new Button("hello");
-
-setTimeout(button.click, 1000);
