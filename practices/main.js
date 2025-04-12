@@ -3,9 +3,9 @@ class Button {
     this.value = value;
   }
 
-  click() {
+  click = () => {
     alert(this.value);
-  }
+  };
 }
 
 let button = new Button("hello");
