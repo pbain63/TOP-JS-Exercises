@@ -1,8 +1,8 @@
 class Rectangle {
-  height = 0;
-  width;
+  #height = 0;
+  #width;
   constructor(height, width) {
-    this.height = height;
-    this.weight = width;
+    this.#height = height;
+    this.#width = width;
   }
 }
