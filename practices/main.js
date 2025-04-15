@@ -1,22 +1,18 @@
-class Animal {
+class Cat {
   constructor(name) {
     this.name = name;
   }
-
   speak() {
-    console.log(`${this.name} makes a noise.`);
+    console.log(`${this.name} makes a noise. `);
   }
 }
 
-class Dog extends Animal {
-  constructor(name) {
-    super(name);
-  }
-
+class Lion extends Cat {
   speak() {
-    console.log(`${this.name} barks.`);
+    super.speak();
+    console.log(`${this.name} roars.`);
   }
 }
 
-const d = new Dog("Mitzie");
-d.speak();
+const l = new Lion("Fuzzy");
+l.speak();
