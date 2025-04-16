@@ -1,17 +1,21 @@
-function Animal() {}
+class DateFormatter extends Date {
+  getFormattedDate() {
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+  }
+}
 
-Animal.prototype.speak = function () {
-  return this;
-};
-Animal.eat = function () {
-  return this;
-};
-
-const obj = new Animal();
-const speak = obj.speak;
-speak();
-console.log(speak());
-
-const eat = Animal.eat;
-eat();
-console.log(eat());
+console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
