@@ -1,6 +1,7 @@
-function ParentClass() {}
-ParentClass.prototype = 3;
-
+class ParentClass {}
 class ChildClass extends ParentClass {}
 
-console.log(Object.getPrototypeOf(new ParentClass()));
+console.log(Object.getPrototypeOf(ChildClass) === ParentClass);
+console.log(
+  Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype
+);
