@@ -1,13 +1,6 @@
-function OldStyleClass() {
-  this.someProperty = 1;
-}
-OldStyleClass.prototype.someMethod = function () {};
+function ParentClass() {}
+ParentClass.prototype = 3;
 
-class ChildClass extends OldStyleClass {}
+class ChildClass extends ParentClass {}
 
-class ModernClass {
-  someProperty = 1;
-  someMethod() {}
-}
-
-class AnotherChildClass extends ModernClass {}
+console.log(Object.getPrototypeOf(new ParentClass()));
