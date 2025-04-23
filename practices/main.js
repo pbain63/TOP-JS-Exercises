@@ -1,7 +1,11 @@
-class ParentClass {}
-class ChildClass extends ParentClass {}
-
-console.log(Object.getPrototypeOf(ChildClass) === ParentClass);
-console.log(
-  Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype
-);
+class SomeClass extends class {
+  constructor() {
+    console.log("Base class");
+  }
+} {
+  constructor() {
+    super();
+    console.log("Derived class");
+  }
+}
+new SomeClass();
