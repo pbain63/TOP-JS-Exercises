@@ -1,11 +1,15 @@
-class SomeClass extends class {
+class ParentClass {
   constructor() {
-    console.log("Base class");
-  }
-} {
-  constructor() {
-    super();
-    console.log("Derived class");
+    return 1;
   }
 }
-new SomeClass();
+console.log(new ParentClass());
+
+class ChildClass extends ParentClass {
+  constructor() {
+    super();
+    return 1;
+  }
+}
+
+console.log(new ChildClass());
