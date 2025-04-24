@@ -1,7 +1,9 @@
-class NullClass extends null {
-  constructor() {
-    return Object.create(new.target.prototype);
+class Square extends Polygon {
+  constructor(length) {
+    super(length, length);
+    this.name = "Square";
+  }
+  get area() {
+    return this.height * this.width;
   }
 }
-const proto = Object.getPrototypeOf;
-console.log(proto(proto(new NullClass())));
