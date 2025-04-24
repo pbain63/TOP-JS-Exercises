@@ -1,9 +1,16 @@
-class Square extends Polygon {
-  constructor(length) {
-    super(length, length);
-    this.name = "Square";
-  }
-  get area() {
-    return this.height * this.width;
+const Animal = {
+  speak() {
+    console.log(`${this.name} makes a noise.`);
+  },
+};
+
+class Dog {
+  constructor(name) {
+    this.name = name;
   }
 }
+
+Object.setPrototypeOf(Dog.prototype, Animal);
+
+const d = new Dog("Mitzie");
+d.speak();
