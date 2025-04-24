@@ -1,15 +1,7 @@
-class ParentClass {
+class NullClass extends null {
   constructor() {
-    return 1;
+    return Object.create(new.target.prototype);
   }
 }
-console.log(new ParentClass());
-
-class ChildClass extends ParentClass {
-  constructor() {
-    super();
-    return 1;
-  }
-}
-
-console.log(new ChildClass());
+const proto = Object.getPrototypeOf;
+console.log(proto(proto(new NullClass())));
