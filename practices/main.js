@@ -1,21 +1,9 @@
-class MyDate extends Date {
-  getFormattedDate() {
-    const months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+function MyObject(v) {
+  return new Object(v);
+}
+class D extends MyObject {
+  constructor(v) {
+    super(v);
   }
 }
-
-console.log(new MyDate("2025, April, 24 18:52:03").getFormattedDate());
+console.log(new D(1) instanceof Number);
