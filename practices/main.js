@@ -1,9 +1,9 @@
-class MyArray extends Array {
-  static get [Symbol.species]() {
-    return Array;
+class C {
+  #x;
+
+  static getX(obj) {
+    return obj.#x;
   }
 }
-const a = new MyArray(1, 2, 3);
-const mapped = a.map((x) => x * x);
-console.log(mapped instanceof MyArray);
-console.log(mapped instanceof Array);
+console.log(C.getX(new C()));
+console.log(C.getX({}));
