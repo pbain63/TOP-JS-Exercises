@@ -1,9 +1,9 @@
-class C {
-  #x;
+const numbers = [4, 2, 9, 1, 5];
+let largest = numbers[0];
 
-  static getX(obj) {
-    return obj.#x;
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] > largest) {
+    largest = numbers[i];
   }
 }
-console.log(C.getX(new C()));
-console.log(C.getX({}));
+console.log(largest);//
