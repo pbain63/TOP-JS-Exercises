@@ -1,3 +1,27 @@
 h1 {
   color: red;
 }
+
+.card-container {
+  position: relative;
+  width: 100%;
+}
+.card-image {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.card-body {
+  position: absolute;
+  width: 100%;
+  background: black;
+  color: white;
+  opacity: 0.6;
+  top: 8em;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: roboto;
+}
+.card-heading {
+  position: absolute;
+}
