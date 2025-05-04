@@ -1,17 +1,26 @@
 * {
   box-sizing: border-box;
 }
-
-.box {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background: red;
-  color: white;
+body {
+  width: 500px;
+  margin: 0 auto;
 }
-#two {
-  background: blue;
-  position: relative;
-  top: 20px;
-  left: 20px;
+
+p {
+  background: aqua;
+  border: 3px solid blue;
+  padding: 10px;
+  margin: 10px;
+}
+span {
+  background: red;
+  border: 1px solid black;
+}
+.positioned {
+  position: absolute;
+  background: yellow;
+  /* inset-block-start: 30px; */
+  top: 30px;
+  /* inset-inline-start: 30px; */
+  left: 30px;
 }
