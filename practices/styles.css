@@ -1,26 +1,22 @@
 * {
   box-sizing: border-box;
 }
-body {
+.outer {
   width: 500px;
-  margin: 0 auto;
+  height: 300px;
+  overflow: scroll;
+  padding-left: 150px;
 }
-
-p {
-  background: aqua;
-  border: 3px solid blue;
-  padding: 10px;
-  margin: 10px;
-}
-span {
+.box {
+  width: 100px;
+  height: 100px;
   background: red;
-  border: 1px solid black;
+  color: white;
+  position: fixed;
+  top: 80px;
+  left: 10px;
+
 }
-.positioned {
-  position: absolute;
-  background: yellow;
-  /* inset-block-start: 30px; */
-  top: 30px;
-  /* inset-inline-start: 30px; */
-  left: 30px;
+#one {
+  background: blue;
 }
