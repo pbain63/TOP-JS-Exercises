@@ -3,14 +3,17 @@
 }
 .utility-flex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .parent_container {
   background: rgb(255, 187, 98);
-  height: 400px;
+  /* height: 400px; */
   width: 600px;
   padding: 10px;
+  margin: auto;
+  
   
 }
 .child_1,
@@ -27,10 +30,11 @@
   border-radius: 5px;
   margin: 5px;
 }
-/* static */
+
 .child_2 {
-  position: static;
-  bottom: 40px;
-  right: 50px;
+  position: sticky;
+  top: 0;
+  /* bottom: 40px; */
+  /* right: 50px; */
   border: 8px solid purple;
 }
