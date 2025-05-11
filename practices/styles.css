@@ -5,7 +5,7 @@ html {
   font-size: 1em;
 }
 body {
-  font: 1.2em Helvetica, Arial, sans-serif;
+  font: 1.2em / 1.5 sans-serif;
   margin: 20px;
   padding: 0;
   background-color: #eee;
@@ -15,7 +15,7 @@ body {
   margin: 2em auto;
 }
 h1 {
-  font-size: 2rem;
+  font-size: calc(1.5rem + 4vw);
   margin: 0;
 }
 .col1,
@@ -42,6 +42,6 @@ h1 {
     background-color: cadetblue;
   }
   h1 {
-    font-size: 4rem;
+    /* font-size: 4rem; */
   }
 }
