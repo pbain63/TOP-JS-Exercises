@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
 }
-.box {
+div {
   background: blueviolet;
   border: 8px solid burlywood;
   margin: 0 auto;
   padding: 32px;
   font-size: calc(1em + 3vw);
   max-width: 600px;
+  min-height: 300px;
+ 
 }
