@@ -1,13 +1,22 @@
 * {
   box-sizing: border-box;
 }
+body {
+  padding: 0;
+  margin: 0;
+}
 div {
   background: blueviolet;
-  border: 8px solid burlywood;
-  margin: 0 auto;
-  padding: 32px;
-  font-size: calc(1em + 3vw);
-  max-width: 600px;
-  min-height: 300px;
- 
+  /* width: 80%; */
+  /* width: 100%; */
+  /* margin: 0 auto; */
+  margin: 48px;
+  padding: 48px;
+  font-size: 32px;
+}
+@media (max-width: 512px) {
+  div {
+    margin: 16px;
+    padding: 16px;
+  }
 }
