@@ -4,23 +4,19 @@
 body {
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: center;
 }
-div {
-  background: blueviolet;
-  /* width: 80%; */
-  /* width: 100%; */
-  /* margin: 0 auto; */
-  margin: 48px;
-  padding: 48px;
-  font-size: 32px;
-  max-width: 512px;
+
+.wrapper {
+  padding: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1em;
 }
-@media (max-width: 512px) {
-  div {
-    margin: 16px;
-    padding: 16px;
-    background: aliceblue;
-  }
+.box {
+  background: maroon;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  font-size: 2em;
+  border-radius: 0.5em;
 }
