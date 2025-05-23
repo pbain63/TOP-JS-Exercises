@@ -6,17 +6,14 @@ body {
   margin: 0;
 }
 
-.wrapper {
-  padding: 3em;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1em;
+.parent {
+  background-color: #23424A;
+  padding: 50px;
+  /* width: 900px; */
+  width: 80%;
+  margin: 0 auto;
 }
-.box {
-  background: maroon;
-  color: white;
-  padding: 1em;
-  text-align: center;
-  font-size: 2em;
-  border-radius: 0.5em;
+.child {
+  background-color: #38cfd9;
+  height: 250px;
 }
