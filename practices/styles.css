@@ -4,6 +4,8 @@
 body {
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 div {
   background: blueviolet;
@@ -13,10 +15,12 @@ div {
   margin: 48px;
   padding: 48px;
   font-size: 32px;
+  max-width: 512px;
 }
 @media (max-width: 512px) {
   div {
     margin: 16px;
     padding: 16px;
+    background: aliceblue;
   }
 }
