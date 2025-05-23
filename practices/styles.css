@@ -15,7 +15,8 @@ body {
 }
 .child {
   background-color: #38cfd9;
-  height: 250px;
+  /* height: 250px; */
   width: 50%;
-  overflow:auto;
+  padding: 5em; /* 16*5 = 80px */
+  /* overflow:auto; */
 }
