@@ -4,19 +4,13 @@
 body {
   padding: 0;
   margin: 0;
-}
 
-.parent {
-  background-color: #23424A;
-  padding: 50px;
-  /* width: 900px; */
-  width: 80%;
-  margin: 0 auto;
+  
 }
-.child {
-  background-color: #38cfd9;
-  /* height: 250px; */
-  width: 50%;
-  padding: 5em; /* 16*5 = 80px */
-  /* overflow:auto; */
+.wrapper {
+  height: 100vh;
+
+  background-image: url(https://images.unsplash.com/photo-1578241561880-0a1d5db3cb8a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80);
+  background-size: cover;
+  background-position: center;
 }
