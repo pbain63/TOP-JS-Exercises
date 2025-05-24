@@ -5,13 +5,29 @@ body {
   padding: 0;
   margin: 0;
 }
-.wrapper {
-  height: 100vh;
 
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
-  background-size: 150px;
-  /* background-position: center; */
-  width: 300px;
-  height: 300px;
-  border: 2px solid pink;
+div {
+  background-color: #ffee99;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 180px;
+  margin-bottom: 12px;
+}
+.example-one {
+  background: url("./fb.png") #ffee99 2.5cm bottom no-repeat;
+  background-size: 2em;
+}
+.example-two {
+  background-image: url(./fb.png)  ;
+  background-color: blueviolet;
+  background-size: 2em;
+  background-position: left 4em bottom 1em ;
+  /* background-repeat:no-repeat; */
+  color: white;
+
+}
+.example-three {
+  background-image: url(./fb.png), url("./image.jpg");
+  background-size: 2em;
+  background-position: 0px 0px, right 3em bottom 2em;
 }
