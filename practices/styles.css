@@ -6,14 +6,26 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  /* max-width: 750px; */
+}
+.top-container {
+  background: #23424a;
 }
 .container {
-  background: #23424a;
+  /* background: #23424a; */
   color: white;
-  width: 80%;
+  /* max-width: 100%; */
   margin: 0 auto;
+  /* padding: 50px 0; */
+  max-width: 750px;
   padding: 2em;
 }
 .intro-content {
   max-width: 50%;
+}
+
+.lower-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2em;
 }
