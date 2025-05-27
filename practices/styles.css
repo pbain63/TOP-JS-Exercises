@@ -5,41 +5,15 @@
 body {
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
+  font-family: sans-serif;
 }
-section {
-  margin: 2rem;
-  /* padding: 2rem; */
+.container {
+  background: #23424a;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
 }
-h2 {
-  font-family: "Courier New", monospace;
-  font-size: 1em;
-  margin: 1em 0 0.3em;
-}
-img {
-  width: 150px;
-  height: 100px;
-  border: 1px solid #000;
-  margin: 10px 0;
-}
-.narrow {
-  width: 100px;
-  height: 150px;
-}
-.fill {
-  object-fit: fill;
-}
-.contain {
-  object-fit: contain;
-}
-.cover {
-  object-fit: cover;
-}
-.none {
-  object-fit: none;
-}
-.scale-down {
-  object-fit: scale-down;
+.intro-content {
+  max-width: 50%;
 }
