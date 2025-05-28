@@ -1,31 +1,46 @@
+/* Colors
+
+Fonts
+#23424A      1 | Roboto Black font-size: 48px;
+#136C72      2 | Roboto Regular font-size: 21px;
+#38CFD9      3 | Roboto Bold font-size: 21px;
+ */
+
 * {
   box-sizing: border-box;
 }
-
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
-  /* max-width: 750px; */
+  font-family: Roboto;
 }
-.top-container {
+.second-container {
   background: #23424a;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 130px;
+  padding-left: 60px;
+}
+.first-container {
+  max-width: 1250px;
 }
 .container {
-  /* background: #23424a; */
-  color: white;
-  /* max-width: 100%; */
-  margin: 0 auto;
-  /* padding: 50px 0; */
-  max-width: 750px;
-  padding: 2em;
+  width: 50%;
 }
-.intro-content {
-  max-width: 50%;
+h1 {
+  font-size: 48px;
 }
+p {
+  font-size: 21px;
+  padding-bottom: 50px;
+}
+a {
+  text-decoration: none;
+  background: #38cfd9;
+  text-transform: uppercase;
 
-.lower-container {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 2em;
+  font-size: 21px;
+
+  padding: 10px 30px;
+  border-radius: 20px;
 }
