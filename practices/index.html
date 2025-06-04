@@ -9,7 +9,24 @@
 
   <body>
     <!-- <h1>This is for testing</h1> -->
-    <div class="hero">
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <!-- <img class="logo" src="./img/logo.svg" alt="" /> -->
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--button">Sign up</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
       <div class="container row">
         <div class="hero__text">
           <h1>Responsive layouts don’t have to be a struggle</h1>
@@ -20,19 +37,19 @@
           </p>
           <a href="#" class="btn">I want to learn</a>
         </div>
-        <!-- <div class="hero__img"> -->
         <img
-          class="hero-img"
-          src="./img/hero-img.jpg"
-          alt="web design sketch"
+          src="img/hero-img.jpg"
+          alt="UX design sketches"
+          class="hero__img"
         />
-        <!-- </div> -->
       </div>
-    </div>
+    </section>
 
-    <div class="container bottom-container">
-      <div class="col-first">
-        <h2>Quality designs made custom, on demand, just for you</h2>
+    <main class="main container row">
+      <section class="primary-content">
+        <h2 class="section-title">
+          Quality designs made custom, on demand, just for you
+        </h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -47,36 +64,30 @@
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
           enim ad minim veniam.
         </p>
-      </div>
-      <div class="container-col-second">
-        <div class="col-second">
-          <div class="col-second-row">
-            <h2>Cheap</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
-          <div class="col-second-row">
-            <h2>Quick</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
-          <div class="col-second-row">
-            <h2>Quality</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Cheap</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+
+        <h2 class="sidebar-title">Quick</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+
+        <h2 class="sidebar-title">Quality</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
+        </p>
+      </aside>
+    </main>
 
     <script src="./main.js"></script>
   </body>
