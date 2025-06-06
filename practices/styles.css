@@ -4,12 +4,8 @@
 - All text is in the text.md file
 
 // Requirements
-1. Refer to the design specs for the
-   overall layout 
-2. The image should line up with
-   the sidebar in the section
-   below
-
+   1. Get all the navigation items next to one another
+   2. Add a space between all the items
 */
 
 *,
@@ -33,48 +29,8 @@ h1 {
   margin-top: 0;
 }
 
-.container {
-  width: 80%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.row {
-  /* display: flex => flex container */
-  display: flex;
-  justify-content: space-between;
-
-  /* can't use yet */
-  /* gap: 100px; */
-}
-
-.col {
-  /* these are now flex items */
-  width: 100%;
-}
-
-.col + .col {
-  margin-left: 30px;
-}
-
-.hero {
-  padding: 100px 0;
-  background-color: #23424a;
-  color: #fff;
-}
-
-.hero__text {
-  width: 62%;
-  margin-top: 0;
-}
-
-.hero__img {
-  width: 32%;
-  align-self: flex-start;
-}
-
-.hero p {
-  margin-bottom: 3em;
+.section-title {
+  color: #87629a;
 }
 
 .btn {
@@ -92,28 +48,107 @@ h1 {
 .btn:focus {
   opacity: 0.75;
 }
-/*  */
-.row {
-  /*  */
-  /* border: 2px solid red; */
+
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.col-first h2 {
-  color: #136c72;
-}
-.bottom-container {
+.row {
   display: flex;
-  gap: 2em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  justify-content: space-between;
 }
-.container-col-second {
-  background-color: #136c72;
+
+.col {
+  /* these are now flex items */
+  width: 100%;
+}
+
+.col + .col {
+  margin-left: 30px;
+}
+
+header {
+  background: #136c72;
+  padding: 1em 0;
+  
+}
+.nav {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.logo {
+  
+}
+.nav__item {
+    /* border: 2px solid yellow; */
+}
+.nav__link {
+  /* border: 2px solid red; */
+}
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*  */
+  display: flex;
+  /* margin-left: 6.5rem; */
+  gap: 3em;
+  /* width: 32%; */
+}
+
+.nav__link {
   color: #fff;
-  padding: 0 1.5em;
-  /* margin: 2em; */
+  text-decoration: none;
+  text-transform: uppercase;
 }
-.col-second-row {
+
+.nav__link--button {
+  background: #fff;
+  color: #136c72;
+  padding: 0.25em 1em;
+  border-radius: 10em;
+}
+
+.nav__link:hover {
+  opacity: 0.75;
+}
+
+.hero {
+  padding: 100px 0;
+  background-color: #23424a;
+  color: #fff;
+}
+
+.hero__text {
+  width: 62%;
+}
+
+.hero__img {
+  width: 32%;
+  align-self: flex-start;
+}
+
+.hero p {
+  margin-bottom: 3em;
+}
+
+.main {
+  margin-top: 3em;
+}
+
+.primary-content {
+  width: 62%;
+}
+
+.sidebar {
+  width: 32%;
+  padding: 1em;
   text-align: center;
-  /* padding: 1em; */
+  color: #fff;
+  background-color: #136c72;
 }
